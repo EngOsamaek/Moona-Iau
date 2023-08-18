@@ -1,0 +1,460 @@
+/*==============================================
+03. Button Css Start
+===============================================*/
+.radious0 {
+    border-radius: 0px !important;
+}
+
+.radious2 {
+    border-radius: 2px;
+}
+
+.radious3 {
+    border-radius: 3px;
+}
+
+.radious50 {
+    border-radius: 50px;
+}
+
+.radious5 {
+    border-radius: 5px;
+}
+
+.radiousp50{ 
+    border-radius: 50%;
+}
+
+
+/*==============================================
+03. Button Css Start
+===============================================*/ 
+.btn-primary { 
+    user-select: none;
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase; 
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;  
+    padding: 18px 30px 18px;   
+    background-color: #000000; 
+    color: #ffffff;  
+    font-family: 'Jost', sans-serif;  
+    font-weight: 500;
+    letter-spacing: 1px;
+    white-space: normal;
+    font-size: 14px;
+    line-height: 1;
+    transition: color .2s ease-out,background-color .2s ease-out,border-color .2s ease-out;  
+    overflow: hidden;
+    border: 1px solid #000000; 
+      
+    &:hover {
+        color: #000000;
+        background-color: transparent;  
+        border-color: #000000; 
+        text-decoration: none; 
+    }
+}
+ 
+.btn-primary.whitebtn {   
+    background-color: #ffffff; 
+    color: #000000;  
+    border: 1px solid #ffffff;  
+      
+    &:hover {
+        color: #ffffff;
+        background-color: transparent;  
+        border-color: #ffffff;  
+    }
+}
+ 
+.btn-primary.transparentWhite {   
+    background-color: transparent; 
+    color: #ffffff;   
+    border: 1px solid #ffffff;  
+      
+    &:hover {
+        color: #000000; 
+        background-color: #ffffff;    
+        border-color: #ffffff;  
+    }
+}
+
+.btn-primary.transparentBlack {   
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+      
+    &:hover {
+        color: #ffffff;
+        background-color: #000000;
+        border-color: #000000;
+    }
+}
+
+.btn-primary.yellowBtn {   
+    background-color: #F88821;  
+    color: #ffffff;   
+    border: 1px solid #F88821;   
+      
+    &:hover {
+        color: #000000; 
+        background-color: #ffffff;    
+        border-color: #ffffff;  
+    }
+}
+ 
+.btn-primary.sotobtn {
+    padding: 13px 20px 13px;   
+}
+ 
+@media (max-width: 1199px) {
+    .btn-primary {  
+        padding: 12px 26px 12px;       
+    }
+
+    .btn-primary.sotobtn {
+        padding: 12px 20px 12px;   
+    }
+}
+ 
+@media (max-width: 991px) { 
+    .btn-primary.sotobtn {
+        padding: 10px 18px 10px;    
+    }
+}
+
+/* Karte Button */
+
+/*** 
+=============================================
+    btn--primary  Css
+=============================================
+***/
+.btn--primary {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #1a1a1a; 
+    background: transparent;
+    color: #1a1a1a; 
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0px 20px 0px;
+    border-radius: 0px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    overflow: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    z-index: 1;
+} 
+
+.btn--primary::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: #f69c63;
+    z-index: -1;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+}
+
+.btn--primary:hover:before {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.btn--primary:hover {
+    color: #ffffff;
+    border-color: #f69c63;
+}
+
+
+/*** 
+=============================================
+   btn--primary  style 2 Css
+=============================================
+***/
+.btn--primary.style2 {
+    position: relative;
+    display: inline-block;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0px 20px 0px;
+    border-radius: 0px;
+    border: 0px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    overflow: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    z-index: 1;
+}
+
+.btn--primary.style2::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: #f69c63;
+    z-index: -1;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+}
+
+.btn--primary.style2:hover:before {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.btn--primary.style2:hover {
+    color: #ffffff;
+}
+
+
+/*** 
+=============================================
+  btn--secondary Css
+=============================================
+***/
+.btn--secondary {
+    position: relative;
+    display: inline-block;
+    background: #ffffff;
+    color: #1a1a1a;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0px 20px 0px;
+    border-radius: 0px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    overflow: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    z-index: 1;
+}
+
+.btn--secondary::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: #f69c63;
+    z-index: -1;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+}
+
+.btn--secondary:hover:before {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.btn--secondary:hover {
+    color: #ffffff;
+}
+
+
+/*** 
+=============================================
+  btn--secondary .style2 Css
+=============================================
+***/
+.btn--secondary.style2 {
+    position: relative;
+    display: inline-block;
+    background: #ffffff;
+    color: #1a1a1a;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0px 20px 0px;
+    border-radius: 0px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    overflow: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    z-index: 1;
+}
+
+.btn--secondary.style2::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: #f69c63; 
+    z-index: -1;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    transition: -webkit-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+}
+
+.btn--secondary.style2:hover:before {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+}
+
+.btn--secondary.style2:hover {
+    color: #ffffff;
+} 
+
+@media (min-width: 1800px) {  
+    .btn--primary,
+    .btn--primary.style2,
+    .btn--secondary,
+    .btn--secondary.style2 { 
+        line-height: 50px;
+    }
+}
+
+@media (min-width: 992px) { 
+    .btn--primary,
+    .btn--primary.style2,
+    .btn--secondary,
+    .btn--secondary.style2 {
+        padding: 0px 40px 0px;
+    }
+}
+
+@media (min-width: 768px) { 
+    .btn--primary,
+    .btn--primary.style2,
+    .btn--secondary,
+    .btn--secondary.style2 {
+        padding: 0px 30px 0px;
+    }
+}
+
+
+/*** 
+=============================================
+  btn redstyle Css
+=============================================
+***/
+.btn-primary.redstyle { 
+    background: #fa323c;
+    border: none;
+    transition: all linear 0.3s;
+    &:hover{
+        background: #1a1a1a;
+        color: #ffffff;
+        box-shadow: 0px 37px 20px -20px rgb(0 0 0 / 20%);
+    }
+}
+
+.btn-primary.redtransparent {
+    background: transparent;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    transition: all linear 0.3s; 
+    &:hover{
+        border: 1px solid #fa323c;
+        background: #fa323c;
+        color: #ffffff;
+        box-shadow: 0px 37px 20px -20px rgb(0 0 0 / 20%);
+    }
+} 
+
+.btn-primary.redstyle2 {
+    background: #fb4862;
+    border: none;
+    transition: all linear 0.3s;
+    &:hover{
+        background: #1a1a1a;
+        color: #ffffff;
+        box-shadow: 0px 37px 20px -20px rgb(0 0 0 / 20%);
+    }
+} 
+
+.btn-primary.redtransparent2 {
+    background: transparent;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    transition: all linear 0.3s; 
+    &:hover{
+        border: 1px solid #fb4862;
+        background: #fb4862;
+        color: #ffffff;
+        box-shadow: 0px 37px 20px -20px rgb(0 0 0 / 20%); 
+    }
+}
+
+
+/*** 
+=============================================
+ Btn Green Style2 Css
+=============================================
+***/
+.btn-primary.greenstyle {
+    background: #139227;
+    border: none;
+    transition: all linear 0.3s;
+
+    &:hover{
+        background: #1a1a1a;
+        color: #ffffff;
+        box-shadow: 0px 37px 20px -20px rgb(0 0 0 / 20%);
+    }
+}
+ 
+.btn-primary.diffcolor {
+    background: #ff5a00; 
+    border: none;
+    transition: all linear 0.3s;
+
+    &:hover{
+        background: #1a1a1a;
+        color: #ffffff;
+        box-shadow: 0px 37px 20px -20px rgb(0 0 0 / 20%);
+    }
+}
+ 

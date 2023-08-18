@@ -1,0 +1,224 @@
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Poppins', sans-serif;
+
+.font-rubik {
+    font-family: 'Rubik', sans-serif;
+}
+
+.font-poppins { 
+    font-family: 'Poppins', sans-serif;
+}
+
+.bgred{
+    background: #fa323c;
+}
+
+.colorRed{
+    color: #fa323c !important; 
+}
+
+.hoverRed{
+    transition: all linear 0.3s;
+    &:hover{
+        color: #fa323c; 
+    }
+}
+
+.font-14{
+    font-size: 14px !important;
+}
+ 
+.heightr100{
+    height: calc(100vh - 35px); 
+    min-height: 500px;
+    object-fit: cover; 
+}
+
+
+/*==============================================
+Home 7 Start 
+===============================================*/
+.fixedStyleMenu{
+    position: absolute;  
+    top: 40px;
+    z-index: 999;
+    width: 100%; 
+}
+
+.overlayBlack{
+    position: relative;
+    &::after{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        content: '';
+        background: rgba(1, 0, 10, 0.3);
+    }
+}
+
+.menuWidth{
+    .widthc50{
+       width: calc(50% - 60px); 
+    }
+    .widthc50{
+       width: calc(50% - 60px); 
+    }
+}
+
+.menu-box.fixedStyleMenu.fixed{
+    display: none; 
+}
+
+.menu-box.menuAfter{
+    display: none;
+}
+
+.menu-box.menuAfter.fixed{
+    display: block;  
+} 
+
+/*==============================================
+Product Grid Start
+===============================================*/
+.animationLine.redaniline { 
+    &::before,
+    &::after { 
+        background-color: #fa323c;
+        opacity: 0;
+        height: 1px; 
+    }
+  
+    &:hover {
+        &::before,
+        &::after {  
+            opacity: 1;
+        } 
+    }
+}
+
+.rating.redrat{
+    li{
+        color: #fa323c; 
+        margin: 0px 1px;
+    }
+    li.colorGray{ 
+        color: #b0b5bb !important; 
+    }
+}
+
+.product-button-set.productBtmMiddle {
+    flex-direction: row;
+    top: unset;
+    right: unset;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, 30px);    
+    opacity: 0;
+    visibility: hidden;
+}
+
+.product-item{
+    &:hover{
+        .product-button-set.productBtmMiddle{
+            transform: translate(-50%, -10px);
+        }
+    }
+}
+
+.product-button-set.productBtmMiddle {
+    .buttonLInk {
+        border: none;
+        background: #ffffff;
+        border-radius: 30px;
+        height: 37px;
+        width: 37px;
+        font-size: 14px;
+        margin: 2px;
+        box-shadow: 0px 10px 20px 0px rgb(21 24 32 / 10%); 
+ 
+        .hoverText {
+            top: unset;
+            right: unset;
+            left: 50%;
+            bottom: calc(100% + 20px);
+            transform: translate(-50%, 0%); 
+
+            &::before {
+                position: absolute;
+                top: 81%;
+                right: unset; 
+                left: 50%;
+                bottom: unset;
+                transform: translate(-50%, 0%) rotate(45deg); 
+                content: '';
+                background: #000000;
+                height: 8px;
+                width: 8px;
+                z-index: -1;
+            }
+        }
+
+        &:hover {
+            background: #fa323c;
+            color: #ffffff; 
+
+            .hoverText { 
+                bottom: calc(100% + 10px);
+                transform: translate(-50%, 0%); 
+                opacity: 1;
+                visibility: visible;  
+            }
+        }
+    }
+}
+
+
+/*==============================================
+SUBSCRIBE Start
+===============================================*/
+.newsletter-input-group.creativeN{
+    .form-control{
+        color: #1a1a1a;
+        border-bottom: 1px solid #1a1a1a;
+        border-radius: 0px;
+        height: 48px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        &::placeholder{
+            color: rgba(26, 26, 26, 0.6); 
+        }
+    }
+} 
+
+.subscribebg{
+    background: #fef5f5;
+}
+
+.borderBtm{
+    border-bottom: 1px solid rgb(225, 226, 228);
+}
+
+.footer-payment img{
+    max-width: 65px; 
+}
+
+.afterNone{
+    &::after{
+        display: none;
+    }
+}
+
+.frcolor{
+    color: #7f7f7f;
+}
+
+.mb--12 {
+    margin-bottom: -12px;
+}
+ 
+
+@media only screen and (max-width: 767px) {
+     
+}

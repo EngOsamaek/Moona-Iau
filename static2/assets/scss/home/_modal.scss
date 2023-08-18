@@ -1,0 +1,479 @@
+ 
+/*==============================================
+QuickView Popup Start
+===============================================*/
+.modal-dialog.quickview-modal-width {
+    max-width: 900px;
+}
+
+.quickview-modal {
+    padding: 20px 0px 20px 20px;
+}
+
+.modalcloser {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} 
+
+/*==============================================
+QuickView Popup Start
+===============================================*/
+.quick-view-slider {
+    .tabs {
+        border: 0px;
+    }
+
+    .ui-tabs .ui-tabs-panel {
+        padding: 0px;
+    }
+}
+
+.popup-product-single-image {
+    img {
+        min-width: 100%;
+    }
+}
+
+.qvBigImgBob {
+    position: relative;
+    width: 100%;
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 30px;
+        width: 30px;
+        background-color: #FF805D;
+        border: 1px solid transparent;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        font-size: 14px;
+        border-radius: 50%;
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s linear;
+
+        &:hover {
+            background-color: #000000;
+            color: #fff;
+            border-color: #000000;
+            box-shadow: none;
+        }
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+}
+ 
+.tab-nav.qvSliderNav {
+    padding: 0px;
+    margin-bottom: 3px;
+    background: transparent;
+    border: 0px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    a.ui-tabs-anchor {
+        display: block;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+.qvSliderNavBox {
+    ul {
+        padding: 0px;
+        margin: 0px;
+        background: transparent;
+        border-radius: 0px;
+        border: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    li.ui-tabs-active {
+        margin: 5px 5px !important;
+    }
+
+    .qvSliderNav {
+        margin: 5px 5px !important;
+
+        img {
+            width: 80px;
+        }
+    }
+
+    .tab-nav.ui-tabs-active {
+        border: 1px solid #FF805D;
+    }
+}
+
+
+
+/*==============================================
+ QuickView Popup Start 
+===============================================*/ 
+.product-switcher.style2{ 
+    .pswitch-item{
+        height: 60px;
+        width: 60px; 
+    }
+}
+
+.productSize.style2{
+    .productSizeitem {
+        font-size: 13px;
+        height: 30px; 
+        width: 30px;
+    }
+}
+
+.product-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.pswitch-item {
+    display: inline-flex;
+    height: 80px;
+    width: 88px;  
+    border: 1px solid #bdbdbd00;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; 
+    }
+}
+
+.pswitch-item.active {
+    border: 1px solid #FC6759;
+}
+
+.pswitch-item {
+    position: relative; 
+    span {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(-16px);
+        top: calc(0% - 20px);
+        font-size: 10px;
+        line-height: 1; 
+        color: #ffffff; 
+        background:#000000;
+        text-transform: capitalize;
+        padding: 6px 8px 4px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden; 
+        transition: all 0.3s linear;
+        font-weight: 400;  
+        text-align: center;
+        white-space: nowrap;
+
+        &::before {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            top: 75%;
+            content: '';
+            background: #000000; 
+            height: 8px;
+            width: 8px;
+            z-index: -1;
+        }
+    }
+
+    &:hover {
+        span {
+            transform: translateX(-50%) translateY(-7px);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}  
+ 
+.productSize { 
+    display: flex;
+    align-items: center;
+    line-height: 0px;
+
+    .productSizeitem {
+        height: 40px;
+        width: 40px;
+        border: 1px solid #BDBDBD; 
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #828282;
+
+        &:hover {
+            color: #828282;
+        }
+    } 
+
+    .productSizeitem.active {
+        border: 1px solid #111111;
+        color: #111111;
+    } 
+}
+
+/*==============================================
+product-quantity
+===============================================*/
+.qtySelector {
+    display: inline-flex; 
+    align-items: center; 
+    border: 1px solid #BDBDBD;
+
+    .decreaseQty,
+    .qtyValue,
+    .increaseQty { 
+        background: transparent; 
+        border: 1px solid transparent; 
+        width: 50px;
+        height: 46px;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #000000; 
+        line-height: 0px;  
+        cursor: pointer;
+        transition: 0.3s; 
+        &:hover {
+            color: #000000;  
+        }
+    }
+    .decreaseQty{
+        color: #74787C;
+    }
+    .increaseQty{
+        font-size: 18px; 
+    }
+
+    .qtyValue { 
+        color: #000000;  
+        font-size: 16px; 
+        font-weight: 500; 
+        &::placeholder {
+            color: #000000; 
+        }
+    }
+} 
+
+.quickCross{
+    position: absolute;
+    top: 0px;
+    right: 0px; 
+}
+
+
+/*==============================================
+ Sidebar Start 
+===============================================*/ 
+.sidebarOffcanvas{
+    background: #FFF7EF; 
+} 
+
+.newsletter-input-group {
+    .sidebarinput{
+        border: 1px solid #ECE2D7 !important;
+        border-radius: 0px; 
+        color: #121111;   
+        height: 50px;
+        &:focus-within,
+        &:focus {
+            border: 1px solid #121111 !important; 
+        }
+        &::placeholder {
+            color: #121111 !important;
+        }
+    }
+}
+
+.bt{
+    border-top: 1px solid #EDDECF; 
+}
+
+.dropup{
+    button{
+        border: none;  
+        &:hover {
+            color: #121111;
+            border: none;
+        }
+    }
+
+    .dropdown-menu{
+        max-width: max-content;  
+        min-width: max-content !important; 
+        border-radius: 0px;
+    }
+}
+
+
+/*==============================================
+ Animation Closer Start 
+===============================================*/
+.animationCloser {
+    background: transparent;
+    height: 40px; 
+    width: 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    opacity: 1;
+
+    .span1{
+        transform: rotate(-45deg) translate(4px, 10px);
+        &::before,
+        &::after {
+            transition-delay: 0.15s !important; 
+        }
+    }
+    
+    .span2{
+        transform: rotate(45deg) translate(-4px, 10px);   
+    }
+ 
+    .animationLine{
+        height: 2px; 
+        width: 40px;  
+    }   
+
+    .animationLine {
+        position: relative;
+        overflow: hidden;
+        padding: 0px;
+    
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px; 
+            height: 2px; 
+            left: 0;
+            bottom: 0px; 
+            background-color: #000000; 
+        }
+    
+        &::before {
+            transform: translateX(-200%);
+            transition: transform .6s cubic-bezier(.61, 1, .88, 1); 
+        }
+    
+        &::after {
+            transform: translateX(0);
+            transition: transform .6s cubic-bezier(.61, 1, .88, 1);  
+        }
+    
+        &:hover {  
+            &::before {
+                transform: translateX(0);
+            }
+    
+            &::after {  
+                transform: translateX(200%);
+            }
+        }
+    }
+ 
+    &:hover {
+        .animationLine{
+            &::before,
+            &::after { 
+                background-color: #FC6759;  
+            }
+    
+            &::before {
+                transform: translateX(0);
+            }
+    
+            &::after {
+                transform: translateX(200%);
+            }
+        }  
+    }
+}
+
+/*==============================================
+Newsletter Modal Start 
+===============================================*/
+.newsletterModalBox{
+    border-radius: 0px;
+}
+
+.height100vh {
+     height: 100vh;
+}
+
+/*==============================================
+Offcanvas Menu Search Start 
+===============================================*/ 
+.menusearch-offcanvas-top.offcanvas-top {
+    min-height: 120px;
+    height: 120px;
+}
+
+.menusearch {
+    padding: 15px 0px 15px;
+
+    .newsletterBox.searchbox {
+        border-radius: 0px;
+        border-bottom: 1px solid rgba(130, 130, 130, 0.3);
+
+        input {
+            padding: 0px; 
+            color: #0E0D10; 
+            &::placeholder {
+                color: #BDBDBD;
+            }
+        }
+    }
+}
+
+.searchboxButton{
+    min-width: unset !important;  
+}
+
+.sideGallary{
+    li{
+        width: 30%;
+        img{
+            min-width: 100%; 
+        }
+    }
+}
+
+ 
+/*==============================================
+Newsletter Start 
+===============================================*/ 
+.checkBoxcommon{
+    width: 20px;
+    height: 20px; 
+    margin-right: 10px;  
+    margin-top: 5px;
+}
