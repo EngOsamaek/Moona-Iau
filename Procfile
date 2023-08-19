@@ -1,1 +1,1 @@
-web: gunicorn Moona.wsgi --workers 2
+web: gunicorn Moona.wsgi

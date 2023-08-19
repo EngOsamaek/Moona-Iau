@@ -101,20 +101,14 @@ STRIPE_PUBLISHABLE_KEY =os.getenv('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY =os.getenv('STRIPE_SECRET_KEY')
 LOGIN_URL = '/login'
 DATABASES = {
-    "default": {
-        "ENGINE": 'django.db.backends.mysql',
-        "NAME": os.getenv("NAME"),
-        "USER": os.getenv("USER"),
-        "PASSWORD": os.getenv("PASSWORD"),
-        "HOST": os.getenv("HOST"),
-        "PORT": os.getenv("PORT"),
-        "OPTIONS": {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
-            'charset': 'utf8mb4',
-            "autocommit": True,
-        }
-
-    },
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hc376eyffwi624jv',
+        'USER': 'z1nnlfs5p3yx6okp',
+        'PASSWORD': 'eagwqw2ki219eky2',
+        'HOST': 'cis9cbtgerlk68wl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
+    }
 }
 
 # Password validation
