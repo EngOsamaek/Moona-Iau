@@ -1,0 +1,148 @@
+.bgred2{
+    background: #fb4862;
+}
+
+.colorRed2{
+    color: #fb4862 !important; 
+}
+
+.yelcolor{
+    color: #ff5a00 !important;
+}
+
+.hoverRed2{
+    transition: all linear 0.3s;
+    &:hover{
+        color: #fb4862; 
+    }
+}
+
+.font-14{
+    font-size: 14px !important;
+}
+
+.bgnion{
+    background: #5bc25e;
+}
+
+/*==============================================
+Home 7 Start 
+===============================================*/
+.rating.redrat2{ 
+    li{
+        color: #ff5a00; 
+        margin: 0px 1px;
+    }
+    li.colorGray{ 
+        color: #b0b5bb !important; 
+    }
+}
+
+.slick-slider .leftanimation {
+    opacity: 0; 
+    transition: all 1s; 
+    transform:  translateX(-50px);
+}
+
+.slick-slider .slick-active .leftanimation {
+    opacity: 1;  
+    transform:  translateX(0%);   
+    animation-name: fadeleft; 
+    animation-duration: .3s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: backwards;  
+}
+
+@keyframes fadeleft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-10%,0,0);
+        transform: translate(-10%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    } 
+}
+  
+.slick-slider .rightanimation {
+    opacity: 0; 
+    transition: all 1s; 
+    transform:  translateX(50px);   
+}
+
+.slick-slider .slick-active .rightanimation { 
+    opacity: 1;  
+    transform:  translateX(0%);   
+    animation-name: faderight; 
+    animation-duration: .3s; 
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;    
+}
+
+@keyframes faderight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(10%,0,0);
+        transform: translate(10%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    } 
+}
+
+@media (max-width: 575px) {
+    .col-custom-padding {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/*==============================================
+Instagram-gallary Start
+===============================================*/
+.gallary-item.gallaryMiddle { 
+    .insta-text {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%) scale(0.6);
+        background: rgba(0, 113, 242, 0.7);
+        border-radius: 0px;
+        padding: 5px;
+
+        .icon {
+            background: transparent;
+            color: #ffffff;
+            font-size: 20px;
+        }
+    }
+
+    &:hover {
+        .insta-text {
+            transform: translate(-50%, 50%) scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.h400{
+    min-height: 400px; 
+    object-fit: cover;
+}
+
+/*==============================================
+Footer Start
+===============================================*/
+.fcolor8{
+    color: #b1b0b0;
+}
+ 
+.fapp-download {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+

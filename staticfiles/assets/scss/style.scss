@@ -1,0 +1,118 @@
+/*============================================ 
+Template Name: Karte
+Version: 1.0 
+Author: Mate_Themes
+Author URI: https://themeforest.net/user/mate_themes
+Description: Karte - Multipurpose E-Commerce Html Template  
+ 
+/*======================================================================
+Preloader Css Start 
+========================================================================*/
+#pre-loader {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    margin-top: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    z-index: 999999;
+}
+
+#pre-loader img {
+    text-align: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    z-index: 99;
+    margin: 0 auto;
+}
+
+
+/*** 
+=====================================================
+Scss Start
+=====================================================
+***/  
+@import "main/_normalize.scss";
+@import "main/_global.scss";   
+@import "main/_buttons.scss";
+@import "main/_pama.scss";
+@import "main/_components.scss";
+@import "home/_menu.scss";
+@import "home/_modal.scss";
+@import "home/_demo1.scss";
+@import "home/_demo2.scss";
+@import "home/_demo3.scss";
+@import "home/_demo4.scss";
+@import "home/_demo5.scss";
+@import "home/_demo6.scss";
+@import "home/_demo7.scss";
+@import "home/_demo8.scss";
+@import "home/_demo9.scss";
+@import "home/_demo10.scss";
+@import "home/_innerPage.scss"; 
+@import "home/_blog.scss";  
+
+/*** 
+=====================================================
+Bottom to top Css
+=====================================================
+***/  
+.scrollToTop {
+    text-decoration: none;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: #F88821;
+    border-radius: 5px;
+    color: #ffffff; 
+    line-height: 48px;
+    font-size: 20px;
+    text-align: center;
+    z-index: 9;
+    cursor: pointer;
+    transform: translateY(100%);
+
+    i {
+        line-height: 0px;
+    }
+
+    &:hover {
+        color: #ffffff;  
+    }
+}
+
+.scrollToTop.active {
+    bottom: 30px;
+    transform: translateY(0%);
+}
+
+@media (max-width: 1199px) {
+    #scrollUp {
+        right: 0%;
+    }
+
+    #scrollUp {
+        display: none !important;
+        opacity: 0;
+    }
+}
+
+/***
+=====================================================
+Bottom to top Css 
+=====================================================
+***/

@@ -1,0 +1,136 @@
+ 
+
+/*==============================================
+Banner Start
+===============================================*/
+.pcolor {
+    color: #4a4a4a;
+}
+
+.buttonArrow {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+
+    .btnText {
+        position: relative;
+        z-index: 1;
+        padding-right: 8px;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: 500;
+    }
+
+    .btnArrow {
+        padding-right: 0px;
+        color: #ff033e;
+        font-size: 16px;
+        transition: all 0.3s ease-in;
+    }
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: -2%;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        content: '';
+        background: rgb(255, 193, 187);
+        transform: translateY(-50%);
+        transition: 0.3s ease-in;
+    }
+
+    &:hover {
+        .btnArrow {
+            transform: translateX(8px);
+        }
+
+        &::after {
+            left: 40%;
+        }
+    }
+}
+
+.rating.rattingColor2 {
+    li {
+        color: #4a4a4a;
+    }
+
+    li.colorGray {
+        color: #b0b5bb !important;
+    }
+}
+
+.heightvh2{
+    height: calc(100vh - 180px);  
+    min-height: 500px;
+    object-fit: cover;    
+}
+
+@media only screen and (max-width: 1199px) {
+    .badge.roundBadge{
+        top: 10px; 
+        left: 10px; 
+    }
+}
+
+
+.slideArrowRed.globalarrow.roundarrow .arrow-back:hover,
+.slideArrowRed.globalarrow.roundarrow .arrow-next:hover,
+.slideArrowRed.globalarrow.roundarrow .slick-prev:focus:hover,
+.slideArrowRed.globalarrow.roundarrow .slick-next:focus:hover,
+.slideArrowRed.globalarrow.roundarrow .slick-prev:hover,
+.slideArrowRed.globalarrow.roundarrow .slick-next:hover {
+    background: #fa323c;
+}
+
+
+/*==============================================
+Footer Start 
+===============================================*/
+.fpartnerbg {
+    background: rgb(52, 51, 51);
+}
+ 
+.newsletter-input-group.styler {
+    border: none;
+    background: #ffffff;
+
+    .form-control {
+        color: #212529;
+        font-family: 'Rubik', sans-serif;
+
+        &::placeholder {
+            font-family: 'Rubik', sans-serif;
+            color: #212529;
+        }
+    }
+
+    button {
+        min-width: max-content;
+
+        &:hover {
+            background: #fb4862;
+        }
+    }
+} 
+
+.media-box.mediastylew {
+    .mediaLIst {
+        .media {
+            color: #797979;
+            background: #ffffff;
+
+            &:hover {
+                color: #ffffff;
+                background: #fa323c;
+            }
+        }
+    }
+}
+
+.topborderwhite{
+    border-top: 1px solid rgba(227, 227, 227, 0.2);
+}

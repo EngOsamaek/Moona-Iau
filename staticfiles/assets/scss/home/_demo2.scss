@@ -1,0 +1,115 @@
+ 
+/*==============================================
+08. Home Page Css Start 
+===============================================*/
+.bg2 {
+    background: #FBE8D6;
+}
+
+.bgBage1 {
+    background: #F88821;
+}
+
+.colorBage1 {
+    color: #F88821 !important;
+} 
+  
+/*==============================================
+video Start  
+===============================================*/  
+.popupVideo {
+    position: relative;
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        color: #ffffff;
+        height: 100px;
+        width: 100px;
+        border: 1px solid #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 0px;
+        border-radius: 50%;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            .icon {
+                color: #F88821;
+                border: 1px solid #F88821;
+            }
+        }
+    }
+}
+ 
+@media only screen and (max-width: 1399px) { 
+    .popupVideo { 
+        .icon { 
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%); 
+        }
+    }
+}
+
+/*==============================================
+ Product Grid Strat  
+===============================================*/
+.badge.roundBadge {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    left: 30px;
+}
+
+.product-item {
+    &:hover {
+        .pbutton.pbutton1 {
+            transform: translate(-50%, -30px);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .pbutton.pbutton2 {
+            transform: translate(-50%, 30px);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.bgWhite {
+    background: #ffffff;
+}
+ 
+
+@media only screen and (max-width: 991px) { 
+    .pbutton {
+        display: none;
+    }
+
+    .badge.roundBadge {
+        top: 10px;
+        left: 10px;  
+    } 
+ 
+    .badge {
+        top: 0px;
+        left: 0px;
+    }
+
+    .badge.roundBadge {
+        height: 40px;
+        width: 40px;
+        font-size: 12px; 
+    }
+} 
+ 
