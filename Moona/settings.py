@@ -101,14 +101,20 @@ STRIPE_PUBLISHABLE_KEY =os.getenv('STRIPE_PUBLISHABLE_KEY')
 STRIPE_SECRET_KEY =os.getenv('STRIPE_SECRET_KEY')
 LOGIN_URL = '/login'
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hc376eyffwi624jv',
-        'USER': 'z1nnlfs5p3yx6okp',
-        'PASSWORD': 'eagwqw2ki219eky2',
-        'HOST': 'cis9cbtgerlk68wl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        'PORT': '3306',
-    }
+    "default": {
+        "ENGINE": 'django.db.backends.mysql',
+        "NAME": "Moona",
+        "USER": "osamakahail",
+        "PASSWORD": "Osama_2001",
+        "HOST": "92.204.220.53",
+        "PORT": "3306",
+        "OPTIONS": {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
+            'charset': 'utf8mb4',
+            "autocommit": True,
+        }
+
+    },
 }
 
 # Password validation
