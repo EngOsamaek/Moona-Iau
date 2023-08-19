@@ -1,0 +1,2181 @@
+{% extends 'baseCustomer.html' %}
+{% load static %}
+{% block content %}
+<body>
+
+    <!-- Page Loader -->
+    <!-- <div id="pre-loader"><img src="{% static 'assets/images/logo/loader.gif' %}" alt="Loading..." /> </div> -->
+    <!-- End Page Loader -->
+
+    <!-- Page-wrapper Start -->
+    <div class="page-wrapper overflow-x">
+
+        <!-- Anouncement Start -->
+        <div class="anouncement-bar bgBlack">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-lg-between justify-content-center align-items-center">
+                        <ul
+                            class="media-box anouncement-list w-auto d-xl-flex d-none align-items-center justify-content-center d-none">
+                            <li class="mediaLIst m-0 pe-3 anouncAfter">
+                                <a class="color-white" href="https://www.facebook.com/" target="_blank">
+                                    <i class="flaticon-facebook-app-symbol"></i>
+                                </a>
+                            </li>
+                            <li class="mediaLIst m-0 ps-3 pe-3 anouncAfter">
+                                <a class="color-white" href="https://www.instagram.com/" target="_blank">
+                                    <i class="flaticon-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="mediaLIst m-0 ps-3 pe-3 anouncAfter">
+                                <a class="color-white" href="https://youtube.com/" target="_blank">
+                                    <i class="flaticon-youtube"></i>
+                                </a>
+                            </li>
+                            <li class="mediaLIst m-0 ps-3">
+                                <a class="color-white" href="https://www.twitter.com/" target="_blank">
+                                    <i class="flaticon-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="media-box anouncement-list w-auto align-items-center justify-content-center">
+                            <li class="mediaLIst m-0 pe-0">
+                                <p class="color-white font-12 font-josefin text-uppercase">
+                                    FREE SHIPPING OVER $200. INTERNATIONAL SHIPPING AVAILABLE.
+                                </p>
+                            </li>
+                        </ul>
+                        <ul class="anouncement-list w-auto d-lg-flex d-none align-items-center justify-content-center">
+                            <li class="dropdown sellector anouncAfter pe-3 d-flex align-items-center hover-white lh-0">
+                                {% if user.is_authenticated %}
+                                <a class="color-white font-josefin font-12" href="/profile-page">
+                                    MY ACCOUNT
+                                </a>
+                                {% endif %}
+                            </li>
+                            <li class="dropdown sellector ps-3 d-flex align-items-center hover-white lh-0">
+                                <div>
+                                    <button class="btn font-12 font-josefin white text-capitalize dropdown-toggle"
+                                        type="button" id="dropdownMenu22" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        ENGLISH
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu22">
+                                        <li><button class="dropdown-item text-center" type="button">ENGLISH</button>
+                                        </li>
+                                        <li><button class="dropdown-item text-center" type="button">Hindi</button></li>
+                                        <li><button class="dropdown-item text-center" type="button">Bangla</button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Anouncement End -->
+
+        <!-- Header-default Start -->
+        <header>
+            <div class="menu-box">
+                <div class="container position-relative">
+                    <div class="mobile-header d-lg-none d-block pt-3 pb-3">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <ul class="micon-box d-flex align-items-center transparent">
+                                    <li>
+                                        <button class="micon colorrBlack ps-0" type="button" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasmenu">
+                                            <span><i class="flaticon-menu-1"></i> </span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <a href="#0" class="micon ps-3 colorrBlack" data-bs-toggle="offcanvas"
+                                            data-bs-target="#menusearch">
+                                            <span><i class="flaticon-loupe"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-4 text-center">
+                                <a href="/index" class="logo d-inline-block">
+                                    <img src="/media/img.png" alt="img">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <ul class="micon-box d-flex align-items-center transparent justify-content-end">
+                                    <li>
+                                        <a href="#" class="micon colorrBlack">
+                                            <span> <i class="flaticon-heart"> </i> </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/cartCustomer" class="micon ps-3 colorrBlack">
+                                            <span>
+                                                <i class="flaticon-shopping-cart"> </i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row anouncement3Border d-lg-block d-none">
+                        <div class="d-flex menu-flex-box justify-content-between align-items-center">
+                            <form action="#0" class="newsletterBox searchStyle4">
+                                <div
+                                    class="newsletter-input-group d-flex pe-3 ps-2 justify-content-between align-items-center">
+                                    <input type="email" class="form-control font-josefin text-capitalize"
+                                        placeholder="Search Here...">
+                                    <button type="submit">
+                                        <span class="lh-0"> <i class="flaticon-loupe"></i> </span>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="logo-holder pt-3 pb-3 d-flex align-items-center justify-content-center">
+                                <a href="/index" >
+                                    <img src="/media/img.png" alt="#0">
+                                </a>
+                            </div>
+                            <ul class="micon-box d-flex lh-0 align-items-center justify-content-end">
+                                <li class="pe-3 anouncAfter">
+                                    {% if user.is_authenticated %}
+
+                                        {% if user.customer.gender is true %}
+                                    <a href="/profile-page" class="micon hover-base lh-1 colorBlack d-flex align-items-center">
+                                        <span><img src="/media/man_icon.png"></span>
+                                    </a>
+                                            {% elif user.customer.gender is false %}
+                                            <a href="/profile-page" class="micon hover-base lh-1 colorBlack d-flex align-items-center">
+                                        <span><img src="/media/woman_icon.png"></span>
+                                    </a>{% endif %}
+                                    {% elif not user.is_authenticated %}
+                                    <a href="/login" class="micon hover-base lh-1 colorBlack d-flex align-items-center">
+                                        <span><i class="flaticon-user-2"></i></span>
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                <li class="ps-3 pe-3 anouncAfter">
+                                    <a href="#" class="micon hover-base lh-1 colorBlack d-flex align-items-center">
+                                        <span><i class="flaticon-heart"></i></span>
+                                    </a>
+                                </li>
+                                <li class="ps-3 pe-3 anouncAfter">
+                                    <button class="micon hover-base lh-1 colorBlack d-flex align-items-center"
+                                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
+                                        aria-controls="offcanvasRight2">
+                                        <span><i class="flaticon-shopping-cart"></i></span>
+                                    </button>
+                                </li>
+                                <li class="ps-3">
+                                    <button class="micon hover-base lh-1 colorBlack d-flex align-items-center"
+                                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                        aria-controls="offcanvasRight">
+                                        <span class="sidebarLine">
+                                            <span class="sline d-block"></span>
+                                            <span class="sline d-block mt-2 mb-2"></span>
+                                            <span class="sline d-block"></span>
+                                        </span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row d-lg-block d-none">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <nav class="d-flex justify-content-center align-items-center">
+                                <ul class="navbar-nav menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link borderRound hover-base" href="/index">
+                                            <span class="font-josefin">Home</span>
+                                            <span class="miarrow ps-2"></span>
+                                        </a>
+
+                                    </li>
+                                    <!--<li class="nav-item">
+                                        <a class="nav-link hover-base" href="#"> <span
+                                                class="font-josefin">About</span> </a>
+                                    </li>-->
+                                    <li class="nav-item">
+                                        <a class="nav-link hover-base" href="/shopCustomer/all">
+                                            <span class="font-josefin">Shop</span>
+                                            <span class="miarrow ps-2"> </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item has-dropdown">
+                                        <a class="nav-link hover-base" href="#0">
+                                            <span class="font-josefin">Pages</span>
+                                            <span class="miarrow ps-2"> <i class="tr flaticon-down-arrow"></i></span>
+                                        </a>
+                                        <ul class="dropdown bgWhite">
+                                            <li>
+                                                {% if not user.is_authenticated %}
+                                                <a class="dropdown-item font-josefin lineAfterBlack" href="/login">
+                                                    <span>Login
+                                                    </span> </a>
+                                                {% elif user.is_authenticated %}
+                                                    <a class="dropdown-item font-josefin lineAfterBlack" href="/logout">
+                                                    <span>Logout
+                                                    </span> </a>
+                                                {% endif %}
+                                            </li>
+                                            <li>
+                                                {% if not user.is_authenticated %}
+                                                <a class="dropdown-item font-josefin lineAfterBlack" href="/registerCustomer">
+                                                    <span>Registration</span> </a>
+                                                {% endif %}
+                                            </li>
+                                            <li>
+                                                {% if user.is_authenticated %}
+                                                <a class="dropdown-item font-josefin lineAfterBlack" href="/cartCustomer">
+                                                    <span>Cart</span> </a>
+                                                    {% elif not user.is_authenticated %}
+                                                    <a class="dropdown-item font-josefin lineAfterBlack" href="/login">
+                                                    <span>Cart</span> </a>
+                                                {% endif %}
+                                            </li>
+                                            <!--
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                        <span>faq</span> </a> </li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>Compare </span> </a> </li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>Error
+                                                    </span> </a> </li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>Wishlist </span> </a></li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>My Account </span> </a></li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>Order Tracking </span> </a></li>
+                                                  -->
+                                        </ul>
+                                    </li>
+                                    <!--<li class="nav-item has-dropdown">
+                                        <a class="nav-link hover-base" href="#0">
+                                            <span class="font-josefin">Blogs</span>
+                                            <span class="miarrow ps-2"> <i class=" tr flaticon-down-arrow"></i></span>
+                                        </a>
+                                        <ul class="dropdown bgWhite">
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                <span>Blogs</span> </a></li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                <span>Blogs Details </span> </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link font-josefin hover-base" href="#"> <span>Contact</span> </a>
+                                    </li>-->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header-default End -->
+
+        <!-- Body Container -->
+        <div class="page-content">
+
+            <!--Start Shop Details Breadcrumb-->
+            <div class="shop-details-breadcrumb wow fadeInUp animated overflow-hidden">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12"> 
+                            <ul class="shop-details-menu d-flex align-items-center position-relative">
+                                <li><a href="index.html" class="font-josefin">Home</a></li>
+                                <li class="active font-josefin">Shop Details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Shop Details Breadcrumb-->
+
+            <!--Start Shop Details Top-->
+            <section class="pt-30">
+                <div class="container">
+                    <div class="row mt--30">
+                        <div class="col-xl-6 col-lg-6 mt-30 wow fadeInUp animated">
+                            <div class="single-product-box stiky pbg pb-4 pt-4">
+                                <div class="singleProductOne globalarrow rightleft30 roundarrow slider-for">
+                                    {% for i in product.images %}
+                                    <div class="single-item">
+                                        <div
+                                            class="d-flex position-relative ph400 justify-content-center align-items-center">
+                                            <img src={{ i }} alt="">
+                                            <span class="ptag font-roboto">-20%</span>
+                                            <a href="#0" class="plove"> <i class="flaticon-heart"></i></a>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+                                <div class="navholder mt-3">
+                                    <div class="singleProductOneNav globalarrow smallarrow roundarrow slider-nav">
+                                        {% for i in product.images %}
+                                        <div class="single-item ms-1 me-1">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <img src="{{ i }}" alt="">
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 mt-30 wow fadeInUp animated">
+                            <div class="product-details-content position-relative">
+                                <ul class="rating pdrating align-items-center">
+                                    <li> <i class=" flaticon-star-1"></i> </li>
+                                    <li> <i class=" flaticon-star-1"></i> </li>
+                                    <li> <i class=" flaticon-star-1"></i> </li>
+                                    <li> <i class=" flaticon-star-1"></i> </li>
+                                    <li> <i class="colorGray flaticon-star-1"></i> </li>
+                                    <li class="colorGray font-14 font-roboto mb--5 ms-2"> (4 Reviews)</li>
+                                </ul>
+                                <h4 class="font-josefin mt-2 pt-2 font-36">{{ product.productName }}</h4>
+                                <ul class="d-flex mt-2 font-roboto align-items-center">
+                                    <li class="font-14 colorBlack anouncAfter me-2 pe-2"> SKU: 25d5214</li>
+                                    <li class="font-14 colorBlack">VENDOR: Flemeno </li>
+                                </ul>
+                                <div class="product-price pdStyle1 mt-3 lh-1 d-flex align-items-center">
+                                    <span class="compared-price colorBage1 font-36 font-josefin fw-500">
+                                        {{ product.productPrice }}
+                                    </span>
+                                    <span class="regular-price font-josefin font-18 ms-2"> $110.00 </span>
+                                </div>
+                                <p class="font-roboto pt-1 font-14">
+                                    (+15% Vat Included)
+                                </p>
+                                <p class="font-josefin mt-3 lh-1 colorBlack d-flex align-items-center">
+                                    <span class="font-20 fw-600 pe-1">20</span>Products sold in last <span
+                                        class="fw-500 ps-1 pe-1">12</span> hours
+                                </p>
+                                <p class="fw-500 font-josefin colorBlack mt-2 pt-2">
+                                    Size
+                                </p>
+                               <ul class="productSize font-roboto style2 mt-2">
+{% if product.productSizes|length > 1 %}
+    {% for i in product.productSizes %}
+        <li><a class="font-josefin productSizeitem active me-2" data-size="{{ i }}" onclick="sizeSelected('{{ i }}')">{{ i }}</a></li>
+    {% endfor %}
+{% elif product.productSizes|length == 1 %}
+    <li><a class="font-josefin productSizeitem active me-2" data-size="{{ product.productSizes.0 }}" onclick="sizeSelected('{{ product.productSizes.0 }}')">{{ product.productSizes.0 }}</a></li>
+{% else %}
+    <!-- I'm assuming here you want to handle the case when there are no sizes, adjust according to your needs -->
+    <li>{{ product.productSizes.0 }}</li>
+{% endif %}
+
+
+
+                                </ul>
+                                <div class="product-details-color pt-2 mt-3">
+                                    <p class="fw-500 colorBlack font-josefin">Color: Blue</p>
+                                    <ul class="product-switcher font-roboto style2 mt-2">
+                                        {% for i in product.productColors %}
+                                        <li>
+                                            <a href="#0" class="pswitch-item wh50 me-2">
+                                                <span class="font-josefin text-uppercase">{{ i }} </span>
+                                                <img src="assets/images/home-4/products-img1.jpg" alt="img">
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <ul class="d-flex font-roboto pt-3 align-items-center">
+                                    <li>
+                                        <a href="compare.html" class="d-flex lh-1 colorBlack me-2 pe-2 align-items-center">
+                                            <span class="me-1"> <i class="flaticon-left-and-right-arrows"></i> </span>
+                                            <span class="text">
+                                                Add to Compare
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="d-flex lh-1 colorBlack align-items-center">
+                                            <span class="me-1"> <i class="flaticon-comment"></i> </span>
+                                            <span class="text">
+                                                Ask Question
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p class="fw-500 font-josefin colorBlack mt-2 pt-2">
+                                    Running Offer
+                                </p>
+                                <div class="timer-box mt-2">
+                                    <div class="countdown-timer">
+                                        <div class="default-coundown">
+                                            <div class="box">
+                                                <div class="countdown time-countdown-two"
+                                                    data-countdown-time="2022/12/12">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="font-josefin mt-3 lh-1 colorBlack d-flex align-items-center">
+                                    <span class="font-20 fw-600 pe-1">20</span>Persons looking for this product
+                                </p>
+                                <p class="fw-500 font-josefin colorBlack mt-2 pt-2">
+                                    Quantity
+                                </p>
+                                <div class="d-flex align-items-center">
+                                    <div class="qtySelector pdCount me-3 mt-2">
+                                        <span class="decreaseQty"><i class="flaticon-minus-sign"></i>
+                                        </span>
+                                        <input type="text" class="qtyValue p-0 me-2 ms-2 text-center" value="1" />
+                                        <span class="increaseQty"> <i class="flaticon-plus-1"></i>
+                                        </span>
+                                    </div>
+                                    <p class="font-roboto colorBlack pt-1 lh-1 d-flex align-items-center font-14">
+                                        <span class="me-1 greenc"><i class="flaticon-select"></i></span>
+                                        <span> In Stock</span>
+                                    </p>
+                                </div>
+                                <div class="d-flex mt-2 pt-2 colorBlack align-items-center lh-1">
+                                    <span class="me-2"><i class="flaticon-point"></i> </span>
+                                    <p>Order Now, Only 10 Left !</p>
+                                </div>
+                                <button class="btn--primary mt-4 style2 w-100" onclick="add_to_cart({{ product.id }})">
+                                    Add To Cart
+                                </button>
+
+                                <div class="d-flex mt-2 pt-2 text-uppercase font-14 colorBlack align-items-center lh-0">
+                                    <span class="me-2 font-16"><i class="flaticon-shipped"></i> </span>
+                                    <p>Spent <span class="fw-500 colorBlack">$399.00</span> More for free Shipping</p>
+                                </div>
+                                <div class="newsletter-bottom d-flex mt-3 lh-1 align-items-center">
+                                    <div class="footer-title-box">
+                                        <p class="font-josefin colorBlack fcolor2">Follow Us:</p>
+                                    </div>
+                                    <div class="footer__medio-boxx medio-boxx font-14 d-flex align-items-center">
+                                        <ul class="d-flex align-items-center">
+                                            <li>
+                                                <a href="https://www.facebook.com/" target="_blank"
+                                                    class="active fcolor2 anouncAfter pe-2">
+                                                    <i class="flaticon-facebook-app-symbol"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/" class="fcolor2 anouncAfter pe-2"
+                                                    target="_blank">
+                                                    <i class="flaticon-youtube"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://twitter.com/" class="fcolor2 anouncAfter pe-2"
+                                                    target="_blank">
+                                                    <i class="flaticon-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/" class="fcolor2" target="_blank">
+                                                    <i class="flaticon-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="checked-box mt-2">
+                                    <form>
+                                        <div class="form-group d-flex align-items-center">
+                                            <input type="checkbox" id="html">
+                                            <label class="ms-2" for="html">
+                                                I agree with all company terms & condition
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <button class="btn--primary mt-3 w-100">
+                                    Buy It Now
+                                </button>
+                                <h6 class="colorBlack mt-3 pt-2 font-josefin fw-600">Guranteed Safe Checkout</h6>
+                                <ul class="d-flex align-items-center mt-2 pt-1">
+                                    <li>
+                                        <a href="#0" class="d-inline-block me-2">
+                                            <img src="assets/images/innerpage/pay-1.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0" class="d-inline-block me-2">
+                                            <img src="assets/images/innerpage/pay-2.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0" class="d-inline-block me-2">
+                                            <img src="assets/images/innerpage/pay-3.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0" class="d-inline-block me-2">
+                                            <img src="assets/images/innerpage/pay-4.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0" class="d-inline-block me-2">
+                                            <img src="assets/images/innerpage/pay-5.jpg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#0" class="d-inline-block">
+                                            <img src="assets/images/innerpage/pay-6.jpg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <p class="font-14 colorGray font-roboto pt-3">
+                                    This product estimated delivery between <span
+                                        class="colorBlack fw-500 ps-1">Wednesday 27 October Tuesday 02 November</span>
+                                </p>
+                                <ul class="font-roboto mt-2">
+                                    <li class="font-14 colorBlack pt-1">Category: <span class="colorGray">Gold
+                                            Diamond</span></li>
+                                    <li class="font-14 colorBlack pt-1">Tags: <span class="colorGray">platinum watch,
+                                            gold ring, women jewellary</span></li>
+                                </ul>
+                                <ul class="d-flex mt-2 align-items-center justify-content-between flex-wrap">
+                                    <li class="mt-3 lh-11 d-flex font-josefin align-items-center">
+                                        <div class="icon font-24 me-2"> <i class="flaticon-briefcase"></i> </div>
+                                        <div class="text colorBlack">
+                                            <p>Money back <br> guarantee</p>
+                                        </div>
+                                    </li>
+                                    <li class="mt-3 lh-11 d-flex font-josefin align-items-center">
+                                        <div class="icon font-24 me-2"> <i class="flaticon-truck"></i> </div>
+                                        <div class="text colorBlack">
+                                            <p>Free Shipping & <br> Return</p>
+                                        </div>
+                                    </li>
+                                    <li class="mt-3 lh-11 d-flex font-josefin align-items-center">
+                                        <div class="icon font-24 me-2"> <i class="flaticon-security"></i> </div>
+                                        <div class="text colorBlack">
+                                            <p>Comportable <br> Support</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End Shop Details Top-->
+
+            <!-- product drescription-tabStart -->
+            <section class="pt-60 pb-60 wow fadeInUp">
+                <div class="container">
+                    <div class="row wow fadeInUp animated">
+                        <div class="col-12">
+                            <ul class="nav product-details-nav borderTop4 nav-one nav-pills justify-content-center"
+                                id="pills-tab-two" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link me-lg-2 active" id="pills-description-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-description" type="button"
+                                        role="tab" aria-controls="pills-description" aria-selected="true">
+                                        Description
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link ms-lg-2 me-lg-2" id="pills-additional-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-additional" type="button"
+                                        role="tab" aria-controls="pills-additional" aria-selected="false">
+                                        Additional
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link ms-lg-2 me-lg-2" id="pills-sizechart-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-sizechart" type="button" role="tab"
+                                        aria-controls="pills-sizechart" aria-selected="false">
+                                        Size Chart
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link ms-lg-2" id="pills-review-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-review" type="button" role="tab"
+                                        aria-controls="pills-review" aria-selected="false">
+                                        Review
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-30 pt-2 wow fadeInUp animated">
+                        <div class="tab-content" id="pills-tabContent-two">
+                            <div class="tab-pane fade show active" id="pills-description" role="tabpanel"
+                                aria-labelledby="pills-description-tab">
+                                <div class="product-drescription">
+                                    <h4 class="font-josefin font-24"> Product Details:</h4>
+                                    <p class="font-roboto mt-3">
+                                        Assertively conceptualize parallel process improvements through user friendly
+                                        colighue to action items. Interactively antidos cultivate interdependent
+                                        customer
+                                        service without clicks-and-mortar e-services. Proactively cultivate go forward
+                                        testing procedures with accurate quality vectors. Globally aiembrace ethical
+                                        functionalities via empowered scenarios. Phosfluorescently restore highly
+                                        efficient
+                                        opportunities and client-focused infomediaries. Enthusiastically transition
+                                        multidisciplinary outside the box thinking without premium networks. Progressive
+                                        supply clicks-and-mortar human capital through enterprise-wide web services.
+                                        Objectivey bester provide access to extensible processes better than more
+                                        qulification dumber there stoaling through 24/365 solutions.
+                                    </p>
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-4 mt-30">
+                                            <img class="w-100" src="{{ product.images.0 }}" alt="">
+                                        </div>
+                                        <div class="col-lg-8 mt-30">
+                                            <h4 class="font-josefin font-24">Specification:</h4>
+                                            <ul class="drescription-list mt-3">
+                                                <li class="font-roboto mt-1">
+                                                    1. Adipiscing hac cubilia, fermentum ipsum auctor parturient tempus
+                                                    lobortis fermentum.
+                                                </li>
+                                                <li class="font-roboto mt-2">
+                                                    2. Euismod disagree soler imperdiet vehicula pede eros ipsum cras mi
+                                                    feugiat.
+                                                </li>
+                                                <li class="font-roboto mt-2">
+                                                    3. Rhoncus consequat phasellus donec suspendisse scelerisque
+                                                    facilisis
+                                                    gravida porttitor turpis.
+                                                </li>
+                                                <li class="font-roboto mt-2">
+                                                    4. Consequat phasellus donec suspendisse scelerisque facilisis
+                                                    gravida
+                                                    porttitor turpis.
+                                                </li>
+                                                <li class="font-roboto mt-2">
+                                                    5. Consequat phasellus donec suspendisse scelerisque facilisis
+                                                    gravida
+                                                    porttitor
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-additional" role="tabpanel"
+                                aria-labelledby="pills-additional-tab">
+                                <div class="product-drescription">
+                                    <p class="font-roboto">
+                                        Assertively conceptualize parallel process improvements through user friendly
+                                        colighue to action items. Interactively antidos cultivate interdependent
+                                        customer
+                                        service without clicks-and-mortar e-services. Proactively cultivate go forward
+                                        testing procedures with accurate quality vectors. Globally aiembrace ethical
+                                        functionalities via empowered scenarios. Phosfluorescently restore highly
+                                        efficient
+                                        opportunities and client-focused infomediaries. Enthusiastically transition
+                                        multidisciplinary outside the box thinking without premium networks. Progressive
+                                        supply clicks-and-mortar human capital through enterprise-wide web services.
+                                        Objectivey bester provide access to extensible processes better than more
+                                        qulification dumber there stoaling through 24/365 solutions.
+                                    </p>
+                                    <ul class="drescription-list mt-3">
+                                        <li class="font-roboto mt-1">
+                                            1. Adipiscing hac cubilia, fermentum ipsum auctor parturient tempus
+                                            lobortis fermentum.
+                                        </li>
+                                        <li class="font-roboto mt-2">
+                                            2. Euismod disagree soler imperdiet vehicula pede eros ipsum cras mi
+                                            feugiat.
+                                        </li>
+                                        <li class="font-roboto mt-2">
+                                            3. Rhoncus consequat phasellus donec suspendisse scelerisque facilisis
+                                            gravida porttitor turpis.
+                                        </li>
+                                        <li class="font-roboto mt-2">
+                                            4. Consequat phasellus donec suspendisse scelerisque facilisis gravida
+                                            porttitor turpis.
+                                        </li>
+                                        <li class="font-roboto mt-2">
+                                            5. Consequat phasellus donec suspendisse scelerisque facilisis gravida
+                                            porttitor
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-sizechart" role="tabpanel"
+                                aria-labelledby="pills-sizechart-tab">
+                                <div class="product-drescription">
+                                    <h4 class="font-josefin font-24">Size Guide:</h4>
+                                    <p class="font-roboto mt-2">
+                                        Assertively conceptualize parallel process improvements through
+                                        user friendly colighue to action items.
+                                    </p>
+                                    <div class="size-tabble mt-4">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Size</th>
+                                                    <th>XXS - XS</th>
+                                                    <th>XS - S</th>
+                                                    <th>S - M</th>
+                                                    <th>M - L</th>
+                                                    <th>L - XL</th>
+                                                    <th>XL - XXL</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ARGENTINA</td>
+                                                    <td>7</td>
+                                                    <td>8</td>
+                                                    <td>9</td>
+                                                    <td>10</td>
+                                                    <td>11</td>
+                                                    <td>12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BOLIVIA</td>
+                                                    <td>8</td>
+                                                    <td>9</td>
+                                                    <td>10</td>
+                                                    <td>11</td>
+                                                    <td>12</td>
+                                                    <td>13</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>COLOMBIA</td>
+                                                    <td>26</td>
+                                                    <td>28</td>
+                                                    <td>30</td>
+                                                    <td>32</td>
+                                                    <td>34</td>
+                                                    <td>36</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>China</td>
+                                                    <td>34</td>
+                                                    <td>36</td>
+                                                    <td>38</td>
+                                                    <td>40</td>
+                                                    <td>42</td>
+                                                    <td>44</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MEXICO</td>
+                                                    <td>32</td>
+                                                    <td>34</td>
+                                                    <td>36</td>
+                                                    <td>38</td>
+                                                    <td>40</td>
+                                                    <td>42</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>JAMAICA</td>
+                                                    <td>40</td>
+                                                    <td>42</td>
+                                                    <td>44</td>
+                                                    <td>46</td>
+                                                    <td>48</td>
+                                                    <td>50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MEXICO</td>
+                                                    <td>32</td>
+                                                    <td>34</td>
+                                                    <td>36</td>
+                                                    <td>38</td>
+                                                    <td>40</td>
+                                                    <td>42</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Australia</td>
+                                                    <td>6</td>
+                                                    <td>8</td>
+                                                    <td>10</td>
+                                                    <td>12</td>
+                                                    <td>14</td>
+                                                    <td>16</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>USA</td>
+                                                    <td>33</td>
+                                                    <td>44</td>
+                                                    <td>55</td>
+                                                    <td>66</td>
+                                                    <td>77</td>
+                                                    <td>88</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>UK</td>
+                                                    <td>6</td>
+                                                    <td>8</td>
+                                                    <td>10</td>
+                                                    <td>12</td>
+                                                    <td>14</td>
+                                                    <td>16</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pant</td>
+                                                    <td>22-23 </td>
+                                                    <td>24-25</td>
+                                                    <td>26-27</td>
+                                                    <td>28-29</td>
+                                                    <td>30-31</td>
+                                                    <td>32-33</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-review" role="tabpanel"
+                                aria-labelledby="pills-review-tab">
+                                <div class="product-drescription">
+                                    <div class="review-single pt-0 hed">
+                                        <ul class="rating font-14">
+                                            <li><i class="flaticon-star-1"></i> </li>
+                                            <li><i class="flaticon-star-1"></i> </li>
+                                            <li><i class="flaticon-star-1"></i> </li>
+                                            <li><i class="flaticon-star-1"></i> </li>
+                                            <li><i class="flaticon-star-1"></i> </li>
+                                            <li> <span class="ps-2 colorGray">BASED ON 100 REVIEW</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="review-single">
+                                        <div class="left">
+                                            <ul class="rating mt-2 font-14">
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                            </ul>
+                                            <h6 class="font-josefin mt-1 pt-2 font-18 fw-600">
+                                                Vary Good quality Theme
+                                                <span class="font-josefin d-block pt-1 font-14">Raul Bates on January
+                                                    28, 2022</span>
+                                            </h6>
+                                            <p class="pt-1 mt-2 font-roboto">
+                                                Assertively conceptualize parallel process improvements through user
+                                                friendly colighue to action items. Interactively antidos cultivate
+                                                interdependent customer service without clicks-and-mortar e-services.
+                                            </p>
+                                        </div>
+                                        <a href="#0"
+                                            class="right-box mt-2 pt-1 font-roboto colorBage1 underline font-14">
+                                            Report this Comments
+                                        </a>
+                                    </div>
+                                    <div class="review-single">
+                                        <div class="left">
+                                            <ul class="rating mt-2 font-14">
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                            </ul>
+                                            <h6 class="font-josefin mt-1 pt-2 font-18 fw-600">
+                                                Amazing Theme
+                                                <span class="font-josefin d-block pt-1 font-14">Kurt Morgan on January
+                                                    28, 2022</span>
+                                            </h6>
+                                            <p class="pt-1 mt-2 font-roboto">
+                                                Assertively conceptualize parallel process improvements through user
+                                                friendly colighue to action items. Interactively antidos cultivate
+                                                interdependent customer service without clicks-and-mortar e-services.
+                                            </p>
+                                        </div>
+                                        <a href="#0"
+                                            class="right-box mt-2 pt-1 font-roboto colorBage1 underline font-14">
+                                            Report this Comments
+                                        </a>
+                                    </div>
+                                    <div class="review-from-box mt-30">
+                                        <h6 class="font-josefin font-18">
+                                            Write a Review
+                                        </h6>
+                                        <form action="#" class="review-from">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="ratting-box">
+                                                        <p class="font-roboto"> RATING </p>
+                                                        <div class="ratting font-14">
+                                                            <i class="flaticon-star-1"></i>
+                                                            <i class="flaticon-star-1"></i>
+                                                            <i class="flaticon-star-1"></i>
+                                                            <i class="flaticon-star-1"></i>
+                                                            <i class="flaticon-star-1"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="name">NAME</label>
+                                                        <input type="text" id="name" class="form-control"
+                                                            placeholder="David Warner">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="number">Number</label>
+                                                        <input type="text" id="number" class="form-control"
+                                                            placeholder="Phone Number">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="email"> Email </label>
+                                                        <input type="text" id="email" class="form-control"
+                                                            placeholder="support@gmail.com">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="namee"> REVIEW TITLE</label>
+                                                        <input type="text" id="namee" class="form-control"
+                                                            placeholder="Give your review title">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group m-0">
+                                                        <label for="email">BODY OF REVIEW (1500) </label>
+                                                        <textarea placeholder="Write Your Comments Here"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn--primary style2 ">
+                                                Submit Review
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- product drescription-tab End -->
+
+            <!-- products start -->
+            <!--
+            <section class="products pt-60 pb-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="wrap-caption margintop--5 text-center p-0 pb-1">
+                                <h3 class="font-josefin fw-700 wow fadeInUp animated">
+                                    Recent Products
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-30">
+                        <div class="col-12">
+                            <div class="sliderParent globalarrow roundarrow position-relative">
+                                <div class="globalSlider" data-slick='{"spaceBetween": 30, "slidesToShow": 4, "cssEase": "linear",  
+                                "infinite": true, "autoplay": false, "pauseOnHover": false,
+                                "autoplaySpeed": 6000, "centerMode": false, "dots": false, "slidesToScroll": 1, "arrows": true,   
+                                    "responsive":[
+                                    {
+                                        "breakpoint": 1199,
+                                        "settings":{
+                                            "slidesToShow": 3
+                                        }
+                                    }, 
+                                    {
+                                        "breakpoint": 991,
+                                        "settings":{
+                                            "slidesToShow": 2
+                                        }
+                                    }, 
+                                    {
+                                        "breakpoint": 767,
+                                        "settings":{
+                                            "slidesToShow": 2
+                                        } 
+                                    }  
+                                ]}'>
+
+                                    <div class="product-item fitem">
+                                        <div class="product-image-wrapper radious5">
+                                            <a class="d-block" href="shop-details-1.html">
+                                                <img class="normal-image" src="assets/images/home-4/products-img1.jpg" alt="product">
+                                                <img class="hover-image changeimage" src="assets/images/home-4/products-img3.jpg" alt="product">
+                                            </a>
+                                            <span class="badge font-14 font-roboto radious2">
+                                                Hot
+                                            </span>
+                                            <ul class="product-button-set style4 d-lg-inline-flex d-none">
+                                                <li class="product-button">
+                                                    <a href="wishlist.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-heart"></i>
+                                                        <span class="hoverText"> Wishlist </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="compare.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-left-and-right-arrows"> </i>
+                                                        <span class="hoverText"> Compare </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="#exampleModalToggle" data-bs-toggle="modal" role="button"
+                                                        class="buttonLInk radious50">
+                                                        <i class="flaticon-view"></i>
+                                                        <span class="hoverText"> Quick View </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content mt-3 text-center position-relative">
+                                            <a href="cart.html" class="pbuttonabsolute btn--primary">
+                                                <span>
+                                                    Add to Cart
+                                                </span>
+                                                <span class="ps-2 ms-2 bcb">
+                                                    <i class="flaticon-shopping-cart"> </i> 
+                                                </span>
+                                            </a>
+                                            <ul class="rating mt-4 pt-3 font-14 justify-content-center align-items-center">
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li class="colorGray"> <i class="flaticon-star-1"></i> </li>
+                                            </ul>
+                                            <a class="d-block pt-2" href="shop-details-1.html">
+                                                <h6 class="product-title font-josefin font-20 fw-600">
+                                                    Women Earring Erl
+                                                </h6>
+                                            </a>
+                                            <div class="product-price d-flex align-items-center justify-content-center">
+                                                <span class="regular-price font-josefin me-2"> $120.00 </span>
+                                                <span class="compared-price font-josefin fw-500">
+                                                    $80.00
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item fitem">
+                                        <div class="product-image-wrapper radious5">
+                                            <a class="d-block" href="shop-details-1.html">
+                                                <img class="normal-image" src="assets/images/home-4/products-img2.jpg"
+                                                    alt="product">
+                                                <img class="hover-image changeimage"
+                                                    src="assets/images/home-4/products-img9.jpg" alt="product">
+                                            </a>
+                                            <ul class="product-button-set style4 d-lg-inline-flex d-none">
+                                                <li class="product-button">
+                                                    <a href="wishlist.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-heart"></i>
+                                                        <span class="hoverText"> Wishlist </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="compare.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-left-and-right-arrows"> </i>
+                                                        <span class="hoverText"> Compare </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="#exampleModalToggle" data-bs-toggle="modal" role="button"
+                                                        class="buttonLInk radious50">
+                                                        <i class="flaticon-view"></i>
+                                                        <span class="hoverText"> Quick View </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content mt-3 text-center position-relative">
+                                            <a href="cart.html" class="pbuttonabsolute btn--primary">
+                                                <span>
+                                                    Add to Cart
+                                                </span>
+                                                <span class="ps-2 ms-2 bcb "> <i class="flaticon-shopping-cart">
+                                                    </i> </span>
+                                            </a>
+                                            <ul
+                                                class="rating mt-4 pt-3 font-14 justify-content-center align-items-center">
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li class="colorGray"> <i class="flaticon-star-1"></i> </li>
+                                            </ul>
+
+                                            <a class="d-block pt-2" href="shop-details-1.html">
+                                                <h6 class="product-title font-josefin font-20 fw-600">
+                                                    Azxol Gold 24 Carat
+                                                </h6>
+                                            </a>
+                                            <div class="product-price d-flex align-items-center justify-content-center">
+                                                <span class="regular-price font-josefin me-2"> $120.00 </span>
+                                                <span class="compared-price font-josefin fw-500">
+                                                    $80.00
+                                                </span>
+                                            </div>
+                                            <ul
+                                                class="product-color-varient mt-2 pt-2 justify-content-center imagevarient mt-1">
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-1.png"
+                                                        class="active product-color color1">
+                                                        <img src="assets/images/home-4/products-img1.jpg" alt="">
+                                                        <span class="colorName">Maroon</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-2.png"
+                                                        class="product-color color2">
+                                                        <img src="assets/images/home-4/products-img2.jpg" alt="">
+                                                        <span class="colorName">Indigo</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-3.png"
+                                                        class="product-color color3">
+                                                        <img src="assets/images/home-4/products-img3.jpg" alt="">
+                                                        <span class="colorName">Violet</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-item fitem">
+                                        <div class="product-image-wrapper radious5">
+                                            <a class="d-block" href="shop-details-1.html">
+                                                <img class="normal-image" src="assets/images/home-4/products-img3.jpg"
+                                                    alt="product">
+                                                <img class="hover-image changeimage"
+                                                    src="assets/images/home-4/products-img1.jpg" alt="product">
+                                            </a>
+                                            <span class="badge font-14 font-roboto radious2">
+                                                New
+                                            </span>
+                                            <ul class="product-button-set style4 d-lg-inline-flex d-none">
+                                                <li class="product-button">
+                                                    <a href="wishlist.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-heart"></i>
+                                                        <span class="hoverText"> Wishlist </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="compare.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-left-and-right-arrows"> </i>
+                                                        <span class="hoverText"> Compare </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="#exampleModalToggle" data-bs-toggle="modal" role="button"
+                                                        class="buttonLInk radious50">
+                                                        <i class="flaticon-view"></i>
+                                                        <span class="hoverText"> Quick View </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content mt-3 text-center position-relative">
+                                            <a href="cart.html" class="pbuttonabsolute btn--primary">
+                                                <span>
+                                                    Add to Cart
+                                                </span>
+                                                <span class="ps-2 ms-2 bcb "> <i class="flaticon-shopping-cart">
+                                                    </i> </span>
+                                            </a>
+                                            <ul
+                                                class="rating mt-4 pt-3 font-14 justify-content-center align-items-center">
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li class="colorGray"> <i class="flaticon-star-1"></i> </li>
+                                            </ul>
+                                            <a class="d-block pt-2" href="shop-details-1.html">
+                                                <h6 class="product-title font-josefin font-20 fw-600">
+                                                    Women Earring Erl
+                                                </h6>
+                                            </a>
+                                            <div class="product-price d-flex align-items-center justify-content-center">
+                                                <span class="regular-price font-josefin me-2"> $120.00 </span>
+                                                <span class="compared-price font-josefin fw-500">
+                                                    $80.00
+                                                </span>
+                                            </div>
+                                            <ul
+                                                class="product-color-varient mt-2 pt-2 justify-content-center imagevarient mt-1">
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-1.png"
+                                                        class="active product-color color1">
+                                                        <img src="assets/images/home-4/products-img1.jpg" alt="">
+                                                        <span class="colorName">Maroon</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-2.png"
+                                                        class="product-color color2">
+                                                        <img src="assets/images/home-4/products-img2.jpg" alt="">
+                                                        <span class="colorName">Indigo</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-3.png"
+                                                        class="product-color color3">
+                                                        <img src="assets/images/home-4/products-img3.jpg" alt="">
+                                                        <span class="colorName">Violet</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-item fitem">
+                                        <div class="product-image-wrapper radious5">
+                                            <a class="d-block" href="shop-details-1.html">
+                                                <img class="normal-image" src="assets/images/home-4/products-img4.jpg"
+                                                    alt="product">
+                                                <img class="hover-image changeimage"
+                                                    src="assets/images/home-4/products-img9.jpg" alt="product">
+                                            </a>
+                                            <span class="badge font-14 font-roboto radious2">
+                                                Hot
+                                            </span>
+                                            <ul class="product-button-set style4 d-lg-inline-flex d-none">
+                                                <li class="product-button">
+                                                    <a href="wishlist.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-heart"></i>
+                                                        <span class="hoverText"> Wishlist </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="compare.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-left-and-right-arrows"> </i>
+                                                        <span class="hoverText"> Compare </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="#exampleModalToggle" data-bs-toggle="modal" role="button"
+                                                        class="buttonLInk radious50">
+                                                        <i class="flaticon-view"></i>
+                                                        <span class="hoverText"> Quick View </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content mt-3 text-center position-relative">
+                                            <a href="shop-details-1.html" class="pbuttonabsolute btn--primary">
+                                                <span>
+                                                    Add to Cart
+                                                </span>
+                                                <span class="ps-2 ms-2 bcb "> <i class="flaticon-shopping-cart">
+                                                    </i> </span>
+                                            </a>
+                                            <ul
+                                                class="rating mt-4 pt-3 font-14 justify-content-center align-items-center">
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li class="colorGray"> <i class="flaticon-star-1"></i> </li>
+                                            </ul>
+                                            <a class="d-block pt-2" href="shop-details-1.html">
+                                                <h6 class="product-title font-josefin font-20 fw-600">
+                                                    Pure Diamond Set-1
+                                                </h6>
+                                            </a>
+                                            <div class="product-price d-flex align-items-center justify-content-center">
+                                                <span class="regular-price font-josefin me-2"> $120.00 </span>
+                                                <span class="compared-price font-josefin fw-500">
+                                                    $80.00
+                                                </span>
+                                            </div>
+                                            <ul
+                                                class="product-color-varient mt-2 pt-2 justify-content-center imagevarient mt-1">
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-1.png"
+                                                        class="active product-color color1">
+                                                        <img src="assets/images/home-4/products-img1.jpg" alt="">
+                                                        <span class="colorName">Maroon</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-2.png"
+                                                        class="product-color color2">
+                                                        <img src="assets/images/home-4/products-img2.jpg" alt="">
+                                                        <span class="colorName">Indigo</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-3.png"
+                                                        class="product-color color3">
+                                                        <img src="assets/images/home-4/products-img3.jpg" alt="">
+                                                        <span class="colorName">Violet</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-item fitem">
+                                        <div class="product-image-wrapper radious5">
+                                            <a class="d-block" href="shop-details-1.html">
+                                                <img class="normal-image" src="assets/images/home-4/products-img2.jpg"
+                                                    alt="product">
+                                                <img class="hover-image changeimage"
+                                                    src="assets/images/home-4/products-img9.jpg" alt="product">
+                                            </a>
+                                            <ul class="product-button-set style4 d-lg-inline-flex d-none">
+                                                <li class="product-button">
+                                                    <a href="wishlist.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-heart"></i>
+                                                        <span class="hoverText"> Wishlist </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="compare.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-left-and-right-arrows"> </i>
+                                                        <span class="hoverText"> Compare </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="#exampleModalToggle" data-bs-toggle="modal" role="button"
+                                                        class="buttonLInk radious50">
+                                                        <i class="flaticon-view"></i>
+                                                        <span class="hoverText"> Quick View </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-content mt-3 text-center position-relative">
+                                            <a href="cart.html" class="pbuttonabsolute btn--primary">
+                                                <span>
+                                                    Add to Cart
+                                                </span>
+                                                <span class="ps-2 ms-2 bcb "> <i class="flaticon-shopping-cart">
+                                                    </i> </span>
+                                            </a>
+                                            <ul
+                                                class="rating mt-4 pt-3 font-14 justify-content-center align-items-center">
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li><i class="flaticon-star-1"></i> </li>
+                                                <li class="colorGray"> <i class="flaticon-star-1"></i> </li>
+                                            </ul>
+                                            <a class="d-block pt-2" href="shop-details-1.html">
+                                                <h6 class="product-title font-josefin font-20 fw-600">
+                                                    Azxol Gold 24 Carat
+                                                </h6>
+                                            </a>
+                                            <div class="product-price d-flex align-items-center justify-content-center">
+                                                <span class="regular-price font-josefin me-2"> $120.00 </span>
+                                                <span class="compared-price font-josefin fw-500">
+                                                    $80.00
+                                                </span>
+                                            </div>
+                                            <ul
+                                                class="product-color-varient mt-2 pt-2 justify-content-center imagevarient mt-1">
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-1.png"
+                                                        class="active product-color color1">
+                                                        <img src="assets/images/home-4/products-img1.jpg" alt="">
+                                                        <span class="colorName">Maroon</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-2.png"
+                                                        class="product-color color2">
+                                                        <img src="assets/images/home-4/products-img2.jpg" alt="">
+                                                        <span class="colorName">Indigo</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" data-src="assets/images/demo-1/product-3.png"
+                                                        class="product-color color3">
+                                                        <img src="assets/images/home-4/products-img3.jpg" alt="">
+                                                        <span class="colorName">Violet</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slick-arrow-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>-->
+            <!-- products end -->
+            
+        </div>
+        <!-- End Body Container -->
+
+        <!-- Footer Start  -->
+        <footer class="footer-default">
+            <div class="footer-default__shap_1 position-absolute ">
+                <img src="{% static 'assets/images/home-4/footer-shape-1.png'%}" alt="">
+            </div>
+            <!--Start Footer-->
+            <div class="footer-default__main-footer position-relative">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
+                            <div class="footer-default__single-box">
+                                <div class="company-info">
+                                    <div class="footer-logo">
+                                        <a href="index.html"> <img src="{% static 'assets/images/logo/logo-white.png'%}" alt=""> </a>
+                                    </div>
+                                    <div class="text1 font-roboto">
+                                        <p>29 Holles Place, Dublin 2 D02 YY46</p>
+                                    </div>
+                                    <div class="text2 font-roboto">
+                                        <p>68 Jay Street, Suite 902 New Side <br> Brooklyn, NY 11201</p>
+                                    </div>
+                                    <div class="text3 font-roboto">
+                                        <p>New York, United States</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
+                            <div class="footer-default__single-box d-md-block d-none">
+                                <div class="footer-title">
+                                    <h5 class="font-24 color-white font-josefin"> Useful Links </h5>
+                                </div>
+                                <ul class="footer-links">
+                                    <li><a class="hover-base font-roboto" href="my-account.html">Account</a></li>
+                                    <li><a class="hover-base font-roboto" href="login.html">Sign In</a></li>
+                                    <li><a class="hover-base font-roboto" href="cart.html">View Cart</a></li>
+                                    <li><a class="hover-base font-roboto" href="wishlist.html">My WishList</a></li>
+                                    <li><a class="hover-base font-roboto" href="compare.html">Compare Products</a></li>
+                                </ul>
+                            </div>
+                            <div
+                                class="footer-default__single-box aline blackstyle commonAccordian borderLine whiteLine d-md-none d-block">
+                                <div class="accordio " id="accordionExamplem">
+                                    <div class="accordion-item footer-accordian">
+                                        <h2 class="accordion-header border-0" id="headingm">
+                                            <button
+                                                class="accordion-button font-josefin justify-content-start p-0 collapsed"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapsem"
+                                                aria-expanded="false" aria-controls="collapsem">
+                                                Useful Links
+                                            </button>
+                                        </h2>
+                                        <div id="collapsem" class="accordion-collapse collapse"
+                                            aria-labelledby="headingm" data-bs-parent="#accordionExamplem">
+                                            <div class="accordion-body">
+                                                <ul class="footer-links">
+                                                    <li><a class="hover-base font-roboto" href="my-account.html">Account</a></li>
+                                                    <li><a class="hover-base font-roboto" href="login.html">Sign In</a></li>
+                                                    <li><a class="hover-base font-roboto" href="cart.html">View Cart</a></li>
+                                                    <li><a class="hover-base font-roboto" href="wishlist.html">My WishList</a></li>
+                                                    <li><a class="hover-base font-roboto" href="compare.html">Compare Products</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
+                            <div class="footer-default__single-box d-md-block d-none">
+                                <div class="footer-title">
+                                    <h4 class="font-24 color-white  font-josefin"> Information </h4>
+                                </div>
+                                <ul class="footer-links">
+                                    <li><a class="hover-base font-roboto" href="about.html">About us</a></li>
+                                    <li><a class="hover-base font-roboto" href="contact.html">Contact Us </a></li>
+                                    <li><a class="hover-base font-roboto" href="faq.html">Faq</a></li>
+                                    <li><a class="hover-base font-roboto" href="blog.html">Latest Posts</a></li>
+                                    <li><a class="hover-base font-roboto" href="order-track.html">Order Track</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-default__single-box aline blackstyle commonAccordian borderLine whiteLine d-md-none d-block">
+                                <div class="accordio " id="accordionExamplen">
+                                    <div class="accordion-item footer-accordian">
+                                        <h2 class="accordion-header border-0" id="headingn">
+                                            <button
+                                                class="accordion-button  font-josefin justify-content-start p-0 collapsed"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapsen"
+                                                aria-expanded="false" aria-controls="collapsen">
+                                                Information
+                                            </button>
+                                        </h2>
+                                        <div id="collapsen" class="accordion-collapse collapse"
+                                            aria-labelledby="headingn" data-bs-parent="#accordionExamplen">
+                                            <div class="accordion-body">
+                                                <ul class="footer-links">
+                                                    <li><a class="hover-base font-roboto" href="about.html">About
+                                                            us</a></li>
+                                                    <li><a class="hover-base font-roboto" href="contact.html">Contact Us
+                                                        </a></li>
+                                                    <li><a class="hover-base font-roboto" href="faq.html">Faq</a></li>
+                                                    <li><a class="hover-base font-roboto" href="blog.html">Latest
+                                                            Posts</a></li>
+                                                    <li><a class="hover-base font-roboto" href="order-track.html">Order
+                                                            Track</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
+                            <div class="footer-default__single-box d-md-block d-none">
+                                <div class="footer-title">
+                                    <h4 class="font-24 color-white font-josefin"> Newsletter </h4>
+                                </div>
+                                <div class="footer-newsletter">
+                                    <p class="text">
+                                        Enter your email to receive our latest updates about our products &
+                                        promotions.
+                                    </p>
+                                    <form action="#0" class="footer-default__subscrib-form">
+                                        <div class="footer-input-box ps-3 font-roboto">
+                                            <input type="email" placeholder="Email address" name="email">
+                                            <button type="submit" class="subscribe_btn"> Subscribe </button>
+                                        </div>
+                                    </form>
+                                    <div class="newsletter-bottom d-flex align-items-center">
+                                        <div class="footer-title-box">
+                                            <p class="font-roboto">Follow Us:</p>
+                                        </div>
+                                        <div class="footer__medio-boxx medio-boxx d-flex align-items-center">
+                                            <ul class=" d-flex align-items-center">
+                                                <li>
+                                                    <a href="https://www.facebook.com/" target="_blank"
+                                                        class="active"><i class="flaticon-facebook-app-symbol"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.youtube.com/" target="_blank"><i
+                                                            class="flaticon-youtube"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://twitter.com/" target="_blank"><i
+                                                            class="flaticon-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.instagram.com/" target="_blank">
+                                                        <i class="flaticon-instagram"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="footer-default__single-box aline blackstyle commonAccordian  borderLine whiteLine d-md-none d-block">
+                                <div class="accordio " id="accordionExampleb">
+                                    <div class="accordion-item footer-accordian">
+                                        <h2 class="accordion-header border-0" id="headingb">
+                                            <button
+                                                class="accordion-button font-josefin justify-content-start p-0 collapsed"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseb"
+                                                aria-expanded="false" aria-controls="collapseb">
+                                                Newsletter
+                                            </button>
+                                        </h2>
+                                        <div id="collapseb" class="accordion-collapse collapse"
+                                            aria-labelledby="headingb" data-bs-parent="#accordionExampleb">
+                                            <div class="accordion-body">
+                                                <div class="footer-newsletter">
+                                                    <p class="text">
+                                                        Enter your email to receive our latest updates about our
+                                                        products & promotions.
+                                                    </p>
+                                                    <form action="#0" class="footer-default__subscrib-form">
+                                                        <div class="footer-input-box ps-3 font-roboto">
+                                                            <input type="email" placeholder="Email address" name="email">
+                                                            <button type="submit" class="subscribe_btn">
+                                                                Subscribe
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                    <div class="newsletter-bottom d-flex align-items-center">
+                                                        <div class="footer-title-box">
+                                                            <p class="font-roboto">Follow Us:</p>
+                                                        </div>
+                                                        <div
+                                                            class="footer__medio-boxx medio-boxx d-flex align-items-center">
+                                                            <ul class=" d-flex align-items-center">
+                                                                <li><a href="https://www.facebook.com/" target="_blank"
+                                                                        class="active"><i
+                                                                            class="flaticon-facebook-app-symbol"></i></a>
+                                                                </li>
+                                                                <li><a href="https://www.youtube.com/"
+                                                                        target="_blank"><i
+                                                                            class="flaticon-youtube"></i></a></li>
+                                                                <li><a href="https://twitter.com/" target="_blank"><i
+                                                                            class="flaticon-twitter"></i></a></li>
+                                                                <li><a href="https://www.instagram.com/"
+                                                                        target="_blank">
+                                                                        <i class="flaticon-instagram"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-bottom Footer-->
+            <div class="footer_bottom position-relative">
+                <div class="container">
+                    <div class="footer_bottom_content">
+                        <div class="copyright wow fadeInUp animated">
+                            <p>© 2022 <a href="index.html" class="colorBage1">Karte.</a> All Rights Reserved.</p>
+                        </div>
+                        <div class="footer-payment wow fadeInUp animated">
+                            <a href="#0"> <img src="{% static 'assets/images/home-4/payment_1.png'%}" alt="payment"> </a>
+                            <a href="#0"> <img src="{% static 'assets/images/home-4/payment_2.png'%}" alt="payment"> </a>
+                            <a href="#0"> <img src="{% static 'assets/images/home-4/payment_3.png'%}" alt="payment"> </a>
+                            <a href="#0"> <img src="{% static 'assets/images/home-4/payment_4.png'%}" alt="payment"> </a>
+                        </div>
+                        <div class="footer-bottom-menu wow fadeInUp animated">
+                            <ul class="d-flex align-items-center">
+                                <li> <a href="contact.html">Sitemap</a> </li>
+                                <li> <a href="about.html">Terms of Service</a> </li>
+                                <li> <a href="about.html">Privacy Policy</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Quick View start-->
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog quickview-modal-width modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="quickview-modal position-relative">
+                        <button type="button" class="btn-close animationCloser quickCross  modalcloser"
+                            data-bs-dismiss="modal" aria-label="Close">
+                            <span class="span1 animationLine"> </span>
+                            <span class="span2 animationLine"> </span>
+                        </button>
+                        <div class="product-details pr-30">
+                            <div class="container auto-container p-0">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <div class="quick-view-slider">
+                                            <div class="tabs">
+                                                <div class="qvBigImgBob">
+                                                    <div id="tab7" class="tab-item qvImg">
+                                                        <div class="popup-product-single-image">
+                                                            <img src="{% static 'assets/images/home-4/products-img5.jpg'%}" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div id="tab8" class="tab-item qvImg">
+                                                        <div class="popup-product-single-image">
+                                                            <img src="{% static 'assets/images/home-4/products-img4.jpg'%}" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div id="tab9" class="tab-item qvImg">
+                                                        <div class="popup-product-single-image">
+                                                            <img src="{% static 'assets/images/home-4/products-img6.jpg'%}" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <button class="prev lh-0"> <i class="flaticon-back"></i> </button>
+                                                    <button class="next lh-0"> <i class="flaticon-next"></i> </button>
+                                                </div>
+                                                <div class="qvSliderNavBox">
+                                                    <ul>
+                                                        <li class="tab-nav qvSliderNav">
+                                                            <a href="#tab7">
+                                                                <img src="{% static 'assets/images/home-4/products-img5.jpg'%}"
+                                                                    alt="img">
+                                                            </a>
+                                                        </li>
+                                                        <li class="tab-nav qvSliderNav">
+                                                            <a href="#tab8">
+                                                                <img src="{% static 'assets/images/home-4/products-img7.jpg'%}"
+                                                                    alt="img">
+                                                            </a>
+                                                        </li>
+                                                        <li class="tab-nav qvSliderNav">
+                                                            <a href="#tab9">
+                                                                <img src="{% static 'assets/images/home-4/products-img6.jpg'%}"
+                                                                    alt="img">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="product-details-content sticky-product-image">
+                                            <h4 class="font-josefin">Women Earring Erl</h4>
+                                            <ul class="rating mt-2 pt-1 align-items-center">
+                                                <li> <i class="flaticon-star-1"></i> </li>
+                                                <li> <i class="flaticon-star-1"></i> </li>
+                                                <li> <i class="flaticon-star-1"></i> </li>
+                                                <li> <i class="flaticon-star-1"></i> </li>
+                                                <li> <i class="flaticon-star-1"></i> </li>
+                                                <li class="mb--5 ms-2"> (4 Reviews)</li>
+                                            </ul>
+                                            <div class="d-flex pt-2 align-items-center">
+                                                <p class="font-22 mt-1 font-josefin colorrBlack me-2">$329.99</p>
+                                                <span class="colorBage1 mt-1">(+15% Vat Included)</span>
+                                            </div>
+                                            <div class="product-details-color mt-3">
+                                                <p class="fw-500 font-josefin">Color: Blue</p>
+                                                <ul class="product-switcher style2 mt-2">
+                                                    <li>
+                                                        <a href="#0" class="pswitch-item wh50 me-2">
+                                                            <span class="font-josefin text-uppercase">Blue </span>
+                                                            <img src="{% static 'assets/images/home-4/products-img1.jpg'%}" alt="img">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#0" class="pswitch-item wh50 me-2">
+                                                            <span class="font-josefin text-uppercase">Black </span>
+                                                            <img src="{% static 'assets/images/home-4/products-img2.jpg'%}" alt="img">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#0" class="pswitch-item wh50  me-2 active">
+                                                            <span class="font-josefin text-uppercase">Gray </span>
+                                                            <img src="{% static 'assets/images/home-4/products-img3.jpg'%}" alt="img">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#0" class="pswitch-item wh50">
+                                                            <span class="font-josefin text-uppercase">Yellow </span>
+                                                            <img src="{% static 'assets/images/home-4/products-img4.jpg'%}" alt="img">
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <p class="fw-500 mt-2">
+                                                Size
+                                            </p>
+                                            <ul class="productSize style2 mt-2">
+                                                <li><a href="#0" class="font-josefin productSizeitem me-2">XS</a></li>
+                                                <li><a href="#0" class="font-josefin productSizeitem active me-2">S </a>
+                                                </li>
+                                                <li><a href="#0" class="font-josefin productSizeitem me-2">M</a></li>
+                                                <li><a href="#0" class="font-josefin productSizeitem me-2">L</a></li>
+                                                <li><a href="#0" class="font-josefin productSizeitem active">XL</a></li>
+                                            </ul>
+                                            <p class="fw-500 font-josefin mt-3">
+                                                Quantity
+                                            </p>
+                                            <div class="qtySelector me-3 mt-2">
+                                                <span class="decreaseQty"><i class="flaticon-minus-sign"></i>
+                                                </span>
+                                                <input type="text" class="qtyValue p-0 me-2 ms-2 text-center"
+                                                    value="1" />
+                                                <span class="increaseQty"> <i class="flaticon-plus-1"></i>
+                                                </span>
+                                            </div>
+                                            <div class="d-flex mt-2 flex-wrap align-items-center">
+                                                <button class="btn-primary sotobtn black me-3 mt-2">
+                                                    Add To Cart
+                                                </button>
+                                                <button class="btn-primary sotobtn transparentBlack mt-2">
+                                                    Buy It Now
+                                                </button>
+                                            </div>
+                                            <div class="pt-2">
+                                                <p class="fw-500 font-josefin mt-3">
+                                                    Secure Payment
+                                                </p>
+                                                <ul class="d-flex align-items-center mt-2">
+                                                    <li class="me-3">
+                                                        <a href="#0"><img src="{% static 'assets/images/shop/payment-1.png'%}"
+                                                                alt=""></a>
+                                                    </li>
+                                                    <li class="me-3">
+                                                        <a href="#0"><img src="{% static 'assets/images/shop/payment-2.png'%}"
+                                                                alt=""></a>
+                                                    </li>
+                                                    <li class="me-3">
+                                                        <a href="#0"><img src="{% static 'assets/images/shop/payment-3.png'%}"
+                                                                alt=""></a>
+                                                    </li>
+                                                    <li class="me-3">
+                                                        <a href="#0"><img src="{% static 'assets/images/shop/payment-4.png'%}"
+                                                                alt=""></a>
+                                                    </li>
+                                                    <li class="me-3">
+                                                        <a href="#0"><img src="{% static 'assets/images/shop/payment-5.png'%}"
+                                                                alt=""></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#0"><img src="{% static 'assets/images/shop/payment-6.png'%}"
+                                                                alt=""></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Start -->
+        <div class="offcanvas offcanvas-start mobile-nav-wrapper" tabindex="-1" id="offcanvasmenu">
+            <div class="offcanvas-header d-flex justify-content-end p-0">
+                <button type="button" class="btn-close animationCloser nev-cross text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                    <span class="span1 animationLine"> </span>
+                    <span class="span2 animationLine"> </span>
+                </button>
+            </div>
+            <div class="offcanvas-body p-0">
+                <nav>
+                    <ul class="mobile-nav navbar-nav flex-column">
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Home </span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="index.html">Home 01</a> </li>
+                                <li> <a class="dropdown-item" href="index-2.html">Home 02</a> </li>
+                                <li> <a class="dropdown-item" href="index-3.html">Home 03</a> </li>
+                                <li> <a class="dropdown-item" href="index-4.html">Home 04</a> </li>
+                                <li> <a class="dropdown-item" href="index-5.html">Home 05</a> </li>
+                                <li> <a class="dropdown-item" href="index-6.html">Home 06</a> </li>
+                                <li> <a class="dropdown-item" href="index-7.html">Home 07</a> </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Shop </span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="shop-grid.html">Shop Grid 01</a> </li>
+                                <li> <a class="dropdown-item" href="shop-grid-left-sidebar.html">Shop Grid 02</a> </li>
+                                <li> <a class="dropdown-item" href="shop-grid-right-sidebar.html">Shop Grid 03</a> </li>
+                                <li> <a class="dropdown-item" href="shop-list-left-sidebar.html">Shop List 01</a> </li> 
+                                <li> <a class="dropdown-item" href="shop-list-right-sidebar.html">Shop List 02</a> </li> 
+                            </ul>
+                        </li>
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Single Product </span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="shop-details-1.html">Single Product 01</a> </li>
+                                <li> <a class="dropdown-item" href="shop-details-2.html">Single Product 02</a> </li>
+                                <li> <a class="dropdown-item" href="shop-details-3.html">Single Product 03</a> </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Pages</span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="about.html">About </a> </li>
+                                <li> <a class="dropdown-item" href="cart.html">Cart </a> </li> 
+                                <li> <a class="dropdown-item" href="compare.html">Compare </a> </li>
+                                <li> <a class="dropdown-item" href="error.html">Error</a> </li>
+                                <li> <a class="dropdown-item" href="faq.html">Faq</a> </li>
+                                <li> <a class="dropdown-item" href="login.html">Login</a> </li>
+                                <li> <a class="dropdown-item" href="register.html">Registration </a> </li>
+                                <li> <a class="dropdown-item" href="wishlist.html">Wishlist</a> </li>
+                                <li> <a class="dropdown-item" href="my-account.html">Account</a> </li>
+                                <li> <a class="dropdown-item" href="order-track.html">Order Track</a> </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Blog</span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="blog.html">Blog </a> </li>
+                                <li> <a class="dropdown-item" href="blog-single.html">Blog Details </a> </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item p-0"><a class="nav-link bb-0" href="contact.html">Contact </a></li>
+                    </ul>
+                </nav>
+                <ul class="mobile-contact-info">
+                    <li class="single-minfo">
+                        <a href="contact.html"><i class="flaticon-location-1"></i>Our location</a>
+                    </li>
+                    <li class="single-minfo">
+                        <a href="login.html"><i class="flaticon-account"></i>Log In / Sign Up</a>
+                    </li>
+                    <li class="single-minfo">
+                        <a href="tel:+1234567890"><i class="flaticon-phone-call"></i>(+01) - 2345 - 6789</a>
+                    </li>
+                </ul>
+                <p class="site-copyright">Copyright 2022 &copy; <a class="underline"
+                        href="https://themeforest.net/user/mate_themes">Karte</a>.
+                    All rights reserved. Powered by <a class="underline"
+                        href="https://themeforest.net/user/mate_themes">Mate_Themes</a>.
+                </p>
+            </div>
+        </div>
+        <!-- Mobile Nav End -->
+
+        <!-- Offcanvas Menu-Search Start -->
+        <div class="offcanvas menusearch-offcanvas-top offcanvas-top" tabindex="-1" id="menusearch">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="menusearch">
+                            <div class="offcanvas-header p-0">
+                                <h5 class="fw-500">What are you looking for?</h5>
+                                <button type="button" class="btn-close animationCloser text-reset"
+                                    data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <span class="span1 animationLine"> </span>
+                                    <span class="span2 animationLine"> </span>
+                                </button>
+                            </div>
+                            <div class="offcanvas-body p-0">
+                                <form action="#0" class="newsletterBox searchbox">
+                                    <div class="newsletter-input-group border-0 p-0 pt-2">
+                                        <input type="search" class="form-control"
+                                            placeholder="Search for products brands and more">
+                                        <button class="w-auto searchboxButton me-3 p-0" type="submit"> <i
+                                                class="flaticon-loupe"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Offcanvas Start -->
+        <div class="offcanvas p-4 pt-0 pe-0 offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight">
+            <div class="offcanvas-header d-flex justify-content-end pe-4">
+                <button type="button" class="btn-close p-0 animationCloser whiteCloser" data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                    <span class="span1 animationLine"> </span>
+                    <span class="span2 animationLine"> </span>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="sidebar-info-contents">
+                    <div class="logo">
+                        <a href="index.html"><img src="{% static 'assets/images/logo/logo-white.png'%}" alt=""></a>
+                    </div>
+                    <div class="content-box">
+                        <h4 class="color-white mt-3 pt-2 animationLine d-inline-block font-josefin">About Us</h4>
+                        <div class="inner-text pt-2">
+                            <p class="font-roboto color-textwhite">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                        </div>
+                    </div>
+                    <div class="form_inner mt-3 pt-1">
+                        <h4 class="color-white font-josefin animationLine d-inline-block ">Support</h4>
+                        <form class="mt-2" action="index.html" method="post">
+                            <div class="form-group mt-4"> <input type="text" name="name" placeholder="Name" required="">
+                            </div>
+                            <div class="form-group mt-4"> <input type="email" name="email" placeholder="Email"
+                                    required="">
+                            </div>
+                            <div class="form-group mt-4"> <textarea name="message" placeholder="Message..."></textarea>
+                            </div>
+                            <div class="form-group message-btn mt-4">
+                                <button type="submit" class="btn--secondary"> <span class="txt">Submit Now</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sidebar-contact-info mt-3 pt-3">
+                        <h4 class="color-white font-josefin animationLine d-inline-block ">Contact Info</h4>
+                        <ul class="mt-2 pt-1">
+                            <li class="font-roboto color-textwhite d-flex align-items-center">
+                                <i class="me-2 flaticon-location-1"></i> New York, United States
+                            </li>
+                            <li class="font-roboto pt-2 color-textwhite d-flex align-items-center">
+                                <i class="me-2 flaticon-phone-call"></i>
+                                <a href="tel:+44203700001" class="color-textwhite">+44 123 456 789</a>
+                            </li>
+                            <li class="font-roboto pt-2 color-textwhite d-flex align-items-center">
+                                <i class="me-2 flaticon-envelope"></i>
+                                <a href="mailto:info@example.com" class="color-textwhite">info@example.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="thm-medio-boxx1 mt-3">
+                        <ul class="social-box">
+                            <li class="facebook"> <a href="https://www.facebook.com/" target="_blank"><i
+                                        class="flaticon-facebook-app-symbol"></i></a> </li>
+                            <li class="twitter"> <a href="https://twitter.com/" target="_blank"><i
+                                        class="flaticon-twitter"></i></a> </li>
+                            <li class="instagram"> <a href="https://www.instagram.com/" target="_blank"><i
+                                        class="flaticon-instagram"></i></a> </li>
+                            <li class="youtube"> <a href="https://www.youtube.com/" target="_blank"><i
+                                        class="flaticon-youtube"></i></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Offcanvas Start -->
+        <div class="offcanvas offcanvascart p-4 pt-3 offcanvas-end" tabindex="-1" id="offcanvasRight2" >
+            <div class="offcanvas-header d-flex justify-content-between align-content-center">
+                <h6 class="text-uppercase font-josefin colorrBlack fw-500">Your Cart (03)</h6>
+                <button type="button" class="btn-close p-0 animationCloser" data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                    <span class="span1 animationLine"> </span>
+                    <span class="span2 animationLine"> </span>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="side-cart h-100 d-flex flex-column justify-content-between">
+                    <div class="top">
+                        <div class="cart_items">
+                            <div class="items d-flex justify-content-between align-items-center">
+                                <div class="left d-flex align-items-center">
+                                    <a href="shop-details-1.html"
+                                        class="thumb d-flex justify-content-between align-items-center">
+                                        <img src="{% static 'assets/images/home-4/products-img1.jpg'%}" alt="">
+                                    </a>
+                                    <div class="text">
+                                        <a href="shop-details-1.html">
+                                            <h6 class="colorrBlack font-josefin fw-500">Diamond Bracelet</h6>
+                                        </a>
+                                        <p>2 X <span>$350.00</span> </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item-remove"> <i class="flaticon-cross"></i> </div>
+                                </div>
+                            </div>
+                            <div class="items d-flex justify-content-between align-items-center">
+                                <div class="left d-flex align-items-center">
+                                    <a href="shop-details-1.html"
+                                        class="thumb d-flex justify-content-between align-items-center">
+                                        <img src="{% static 'assets/images/home-4/products-img2.jpg'%}" alt="">
+                                    </a>
+                                    <div class="text"> <a href="shop-details-1.html">
+                                            <h6 class="colorrBlack font-josefin fw-500">Blacked Neckles </h6>
+                                        </a>
+                                        <p>1 X <span>$150.00</span> </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item-remove"> <i class="flaticon-cross"></i> </div>
+                                </div>
+                            </div>
+                            <div class="items d-flex justify-content-between align-items-center">
+                                <div class="left d-flex align-items-center">
+                                    <a href="shop-details-1.html"
+                                        class="thumb d-flex justify-content-between align-items-center">
+                                        <img src="{% static 'assets/images/home-4/products-img3.jpg'%}" alt="">
+                                    </a>
+                                    <div class="text"> <a href="shop-details-1.html">
+                                            <h6 class="colorrBlack font-josefin fw-500">Diamond Ring </h6>
+                                        </a>
+                                        <p>1 X <span>$200.00</span> </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item-remove"> <i class="flaticon-cross"></i> </div>
+                                </div>
+                            </div>
+                            <div class="items d-flex justify-content-between align-items-center">
+                                <div class="left d-flex align-items-center">
+                                    <a href="shop-details-1.html"
+                                        class="thumb d-flex justify-content-between align-items-center">
+                                        <img src="{% static 'assets/images/home-4/products-img4.jpg'%}" alt="">
+                                    </a>
+                                    <div class="text"> <a href="shop-details-1.html">
+                                            <h6 class="colorrBlack font-josefin fw-500">Women Earring</h6>
+                                        </a>
+                                        <p>1 X <span>$150.00</span> </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item-remove"> <i class="flaticon-cross"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="total-ammount d-flex justify-content-between align-items-center">
+                            <h6 class="text-uppercase colorrBlack font-josefin fw-500">Total:</h6>
+                            <h6 class="ammount text-uppercase colorrBlack font-josefin fw-500">$850.00</h6>
+                        </div>
+                        <div class="button-box d-flex justify-content-between">
+                            <a href="cart.html" class="btn_black"> View Cart </a>
+                            <a href="cart.html" class="button-2 btn_theme"> Chekout </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+ 
+        <!--===scroll bottom to top===-->
+        <a href="#0" class="scrollToTop"><i class="flaticon-up-arrow"></i></a>
+        <!--===scroll bottom to top===-->
+
+
+        <!--==== Js Scripts Start ====-->
+        <!-- Jquery v3.6.0 Js -->
+        {% load static %}
+<script src="{% static 'assets/js/jqurey.v3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.v2.9.3.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.v5.1.1.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery-ui.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/slick.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jarallax.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/img-comparison-slider.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/wow.v1.3.0.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+    <!--Jivo chat-->
+        <script src="//code.jivosite.com/widget/y6AIKc6tjk" async></script>
+
+        <script>
+                                   var choosenSize;
+    function sizeSelected(size){
+        choosenSize=size
+        console.log(choosenSize);
+
+    }
+    function add_to_cart(id){
+        window.location.href = "/add-to-cart/"+id+"/"+choosenSize;
+
+        // Now you can use 'chosenSize' variable for your needs
+        console.log(choosenSize);
+
+}
+                                </script>
+
+
+    </div>
+    <!-- Page-wrapper End -->
+
+</body>
+
+{% endblock %}

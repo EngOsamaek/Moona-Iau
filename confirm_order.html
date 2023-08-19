@@ -1,0 +1,38 @@
+{% extends 'baseCustomer.html' %}
+{% csrf_token %}
+{% load static %}
+{% block content %}
+
+{% autoescape on %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Order Been Confirmed</title>
+    <style>
+        /* Your existing styles here */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="email-content">
+<img src="http://{{ domain }}/media/moona-logo.png" alt="Moona Logo" class="logo">
+            <h1>Hello {{ name|default:"No Name Found" }}!!</h1>
+            <p>Your order will be sent to: {{ address|default:"No Address Found" }}</p>
+            <p>Here are the products in your order:</p>
+            {% for product in products %}
+            <div class="product-item">
+                <img src="/{{ product.product_image|default:"#"}} " alt="{{ product.product_name|default:"No Name Found" }}" class="product-image">
+                <h2>{{ product.product_name|default:"No Name Found" }}</h2>
+                <p>{{ product.product_price|default:"0.0" }}</p>
+                <p>{{ product.product_amount|default:"None" }}</p>
+                <p>{{  product.total|default:"None"}}</p>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% endautoescape %}
+{% endblock %}

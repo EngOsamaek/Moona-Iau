@@ -1,0 +1,1399 @@
+{% extends 'baseCustomer.html' %}
+{% load static %}
+{% block content %}
+<body>
+
+    <!-- Page Loader -->
+    <!-- <div id="pre-loader"><img src="{% static 'assets/images/logo/loader.gif' %}" alt="Loading..." /> </div> -->
+    <!-- End Page Loader -->
+
+    <!-- Page-wrapper Start -->
+    <div class="page-wrapper overflow-x">
+
+        <!-- Anouncement Start -->
+        <div class="anouncement-bar bgBlack">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-lg-between justify-content-center align-items-center">
+                        <ul
+                            class="media-box anouncement-list w-auto d-xl-flex d-none align-items-center justify-content-center d-none">
+                            <li class="mediaLIst m-0 pe-3 anouncAfter">
+                                <a class="color-white" href="https://www.facebook.com/" target="_blank">
+                                    <i class="flaticon-facebook-app-symbol"></i>
+                                </a>
+                            </li>
+                            <li class="mediaLIst m-0 ps-3 pe-3 anouncAfter">
+                                <a class="color-white" href="https://www.instagram.com/" target="_blank">
+                                    <i class="flaticon-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="mediaLIst m-0 ps-3 pe-3 anouncAfter">
+                                <a class="color-white" href="https://youtube.com/" target="_blank">
+                                    <i class="flaticon-youtube"></i>
+                                </a>
+                            </li>
+                            <li class="mediaLIst m-0 ps-3">
+                                <a class="color-white" href="https://www.twitter.com/" target="_blank">
+                                    <i class="flaticon-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="media-box anouncement-list w-auto align-items-center justify-content-center">
+                            <li class="mediaLIst m-0 pe-0">
+                                <p class="color-white font-12 font-josefin text-uppercase">
+                                    FREE SHIPPING OVER $200. INTERNATIONAL SHIPPING AVAILABLE.
+                                </p>
+                            </li>
+                        </ul>
+                        <ul class="anouncement-list w-auto d-lg-flex d-none align-items-center justify-content-center">
+                            <li class="dropdown sellector anouncAfter pe-3 d-flex align-items-center hover-white lh-0">
+                                {% if user.is_authenticated %}
+                                <a class="color-white font-josefin font-12" href="/profile-page">
+                                    MY ACCOUNT
+                                </a>
+                                {% endif %}
+                            </li>
+                            <li class="dropdown sellector ps-3 d-flex align-items-center hover-white lh-0">
+                                <div>
+                                    <button class="btn font-12 font-josefin white text-capitalize dropdown-toggle"
+                                        type="button" id="dropdownMenu22" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        ENGLISH
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu22">
+                                        <li><button class="dropdown-item text-center" type="button">ENGLISH</button>
+                                        </li>
+                                        <li><button class="dropdown-item text-center" type="button">Hindi</button></li>
+                                        <li><button class="dropdown-item text-center" type="button">Bangla</button></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Anouncement End -->
+
+        <!-- Header-default Start -->
+        <header>
+            <div class="menu-box">
+                <div class="container position-relative">
+                    <div class="mobile-header d-lg-none d-block pt-3 pb-3">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <ul class="micon-box d-flex align-items-center transparent">
+                                    <li>
+                                        <button class="micon colorrBlack ps-0" type="button" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasmenu">
+                                            <span><i class="flaticon-menu-1"></i> </span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <a href="#0" class="micon ps-3 colorrBlack" data-bs-toggle="offcanvas"
+                                            data-bs-target="#menusearch">
+                                            <span><i class="flaticon-loupe"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-4 text-center">
+                                <a href="/index" class="logo d-inline-block">
+                                    <img src="/media/img.png" alt="img">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <ul class="micon-box d-flex align-items-center transparent justify-content-end">
+                                    <li>
+                                        <a href="#" class="micon colorrBlack">
+                                            <span> <i class="flaticon-heart"> </i> </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/cartCustomer" class="micon ps-3 colorrBlack">
+                                            <span>
+                                                <i class="flaticon-shopping-cart"> </i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row anouncement3Border d-lg-block d-none">
+                        <div class="d-flex menu-flex-box justify-content-between align-items-center">
+                            <form action="#0" class="newsletterBox searchStyle4">
+                                <div
+                                    class="newsletter-input-group d-flex pe-3 ps-2 justify-content-between align-items-center">
+                                    <input type="email" class="form-control font-josefin text-capitalize"
+                                        placeholder="Search Here...">
+                                    <button type="submit">
+                                        <span class="lh-0"> <i class="flaticon-loupe"></i> </span>
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="logo-holder pt-3 pb-3 d-flex align-items-center justify-content-center">
+                                <a href="/index" >
+                                    <img src="/media/img.png" alt="#0">
+                                </a>
+                            </div>
+                            <ul class="micon-box d-flex lh-0 align-items-center justify-content-end">
+                                <li class="pe-3 anouncAfter">
+                                    {% if user.is_authenticated %}
+
+                                        {% if user.customer.gender is true %}
+                                    <a href="/profile-page" class="micon hover-base lh-1 colorBlack d-flex align-items-center">
+                                        <span><img src="/media/man_icon.png"></span>
+                                    </a>
+                                            {% elif user.customer.gender is false %}
+                                            <a href="/profile-page" class="micon hover-base lh-1 colorBlack d-flex align-items-center">
+                                        <span><img src="/media/woman_icon.png"></span>
+                                    </a>{% endif %}
+                                    {% elif not user.is_authenticated %}
+                                    <a href="/login" class="micon hover-base lh-1 colorBlack d-flex align-items-center">
+                                        <span><i class="flaticon-user-2"></i></span>
+                                    </a>
+                                    {% endif %}
+                                </li>
+                                <li class="ps-3 pe-3 anouncAfter">
+                                    <a href="#" class="micon hover-base lh-1 colorBlack d-flex align-items-center">
+                                        <span><i class="flaticon-heart"></i></span>
+                                    </a>
+                                </li>
+                                <li class="ps-3 pe-3 anouncAfter">
+                                    <button class="micon hover-base lh-1 colorBlack d-flex align-items-center"
+                                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2"
+                                        aria-controls="offcanvasRight2">
+                                        <span><i class="flaticon-shopping-cart"></i></span>
+                                    </button>
+                                </li>
+                                <li class="ps-3">
+                                    <button class="micon hover-base lh-1 colorBlack d-flex align-items-center"
+                                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                        aria-controls="offcanvasRight">
+                                        <span class="sidebarLine">
+                                            <span class="sline d-block"></span>
+                                            <span class="sline d-block mt-2 mb-2"></span>
+                                            <span class="sline d-block"></span>
+                                        </span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row d-lg-block d-none">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <nav class="d-flex justify-content-center align-items-center">
+                                <ul class="navbar-nav menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link borderRound hover-base" href="/index">
+                                            <span class="font-josefin">Home</span>
+                                            <span class="miarrow ps-2"></span>
+                                        </a>
+
+                                    </li>
+                                    <!--<li class="nav-item">
+                                        <a class="nav-link hover-base" href="#"> <span
+                                                class="font-josefin">About</span> </a>
+                                    </li>-->
+                                    <li class="nav-item">
+                                        <a class="nav-link hover-base" href="/shopCustomer/all">
+                                            <span class="font-josefin">Shop</span>
+                                            <span class="miarrow ps-2"> </span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item has-dropdown">
+                                        <a class="nav-link hover-base" href="#0">
+                                            <span class="font-josefin">Pages</span>
+                                            <span class="miarrow ps-2"> <i class="tr flaticon-down-arrow"></i></span>
+                                        </a>
+                                        <ul class="dropdown bgWhite">
+                                            <li>
+                                                {% if not user.is_authenticated %}
+                                                <a class="dropdown-item font-josefin lineAfterBlack" href="/login">
+                                                    <span>Login
+                                                    </span> </a>
+                                                {% elif user.is_authenticated %}
+                                                    <a class="dropdown-item font-josefin lineAfterBlack" href="/logout">
+                                                    <span>Logout
+                                                    </span> </a>
+                                                {% endif %}
+                                            </li>
+                                            <li>
+                                                {% if not user.is_authenticated %}
+                                                <a class="dropdown-item font-josefin lineAfterBlack" href="/registerCustomer">
+                                                    <span>Registration</span> </a>
+                                                {% endif %}
+                                            </li>
+                                            <li>
+                                                {% if user.is_authenticated %}
+                                                <a class="dropdown-item font-josefin lineAfterBlack" href="/cartCustomer">
+                                                    <span>Cart</span> </a>
+                                                    {% elif not user.is_authenticated %}
+                                                    <a class="dropdown-item font-josefin lineAfterBlack" href="/login">
+                                                    <span>Cart</span> </a>
+                                                {% endif %}
+                                            </li>
+                                            <!--
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                        <span>faq</span> </a> </li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>Compare </span> </a> </li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>Error
+                                                    </span> </a> </li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>Wishlist </span> </a></li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>My Account </span> </a></li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                    <span>Order Tracking </span> </a></li>
+                                                  -->
+                                        </ul>
+                                    </li>
+                                    <!--<li class="nav-item has-dropdown">
+                                        <a class="nav-link hover-base" href="#0">
+                                            <span class="font-josefin">Blogs</span>
+                                            <span class="miarrow ps-2"> <i class=" tr flaticon-down-arrow"></i></span>
+                                        </a>
+                                        <ul class="dropdown bgWhite">
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                <span>Blogs</span> </a></li>
+                                            <li><a class="dropdown-item font-josefin lineAfterBlack" href="#">
+                                                <span>Blogs Details </span> </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link font-josefin hover-base" href="#"> <span>Contact</span> </a>
+                                    </li>-->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header-default End -->
+
+        <!-- Body Container -->
+        <div class="page-content overflow-hidden">
+
+            <!--Start Breadcrumb Style2-->
+            <section class="breadcrumb-area" style="background-image: url('/media/img_19.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="breadcrumb-content pb-60 margintop--5 text-center wow fadeInUp animated">
+
+                                <div class="breadcrumb-menu">
+                                    <ul>
+                                        <li><a href="/index"><i class="flaticon-home pe-2"></i>Home</a></li>
+                                        <li> <i class="flaticon-next"></i> </li>
+                                        <li class="active">Shop Grid</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End Breadcrumb Style2-->
+
+            <!--Start Product Categories One-->
+            <section class="grid-category pt-3 pb-60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 wow fadeInUp animated">
+                            <div class="sliderParent globalarrow roundarrow mobileArrow position-relative">
+                                <div class="globalSlider" data-slick='{"spaceBetween": 30, "slidesToShow": 6, "cssEase": "linear",  "infinite": true, "autoplay": true,
+                                "pauseOnHover": false, "autoplaySpeed": 3000, "centerMode": false, "dots": false, "slidesToScroll": 1, "arrows": true,
+                                    "responsive":[
+                                    {
+                                        "breakpoint": 1199,  
+                                        "settings":{
+                                            "slidesToShow": 4
+                                        }
+                                    }, 
+                                    {
+                                        "breakpoint": 767,
+                                        "settings":{
+                                            "slidesToShow": 3
+                                        }
+                                    },
+                                    {
+                                        "breakpoint": 500,
+                                        "settings":{
+                                            "slidesToShow": 2
+                                        } 
+                                    }  
+                                ]}'>
+
+                                    <div class="gridCategoryBox text-center">
+                                        <a href="/shopCustomer/Electronics" class="img-box">
+                                            <div class="inner">
+                                                <img src="/media/img_9.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="title">
+                                            <a href="/shopCustomer/Electronics" class="fw-600 font-josefin">
+                                                <h6 class="fw-600 font-josefin">Electronics</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gridCategoryBox text-center">
+                                        <a href="/shopCustomer/Furniture" class="img-box">
+                                            <div class="inner">
+                                                <img src="/media/img_10.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="title">
+                                            <a href="/shopCustomer/Furniture" class="fw-600 font-josefin">
+                                                <h6 class="fw-600 font-josefin">Furnitures</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gridCategoryBox text-center">
+                                        <a href="/shopCustomer/Jewellery" class="img-box">
+                                            <div class="inner">
+                                                <img src="/media/img_7.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="title">
+                                            <a href="/shopCustomer/Jewellery">
+                                                <h6 class="fw-600 font-josefin">Jewellery</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gridCategoryBox text-center">
+                                        <a href="/shopCustomer/Shoes" class="img-box">
+                                            <div class="inner">
+                                                <img src="/media/img_8.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="title">
+                                            <a href="/shopCustomer/Shoes">
+                                                <h6 class="fw-600 font-josefin">Shoes</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gridCategoryBox text-center">
+                                        <a href="/shopCustomer/Decoration" class="img-box">
+                                            <div class="inner">
+                                                <img src="/media/img_11.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="title">
+                                            <a href="/shopCustomer/Decoration">
+                                                <h6 class="fw-600 font-josefin">Decoration</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gridCategoryBox text-center">
+                                        <a href="/shopCustomer/Fashion" class="img-box">
+                                            <div class="inner">
+                                                <img src="/media/img_12.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="title">
+                                            <a href="/shopCustomer/Fashion">
+                                                <h6 class="fw-600 font-josefin">Fashion</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gridCategoryBox text-center">
+                                        <a href="/shopCustomer/Jewellery" class="img-box">
+                                            <div class="inner">
+                                                <img src="/media/img_7.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="title">
+                                            <a href="/shopCustomer/Jewellery">
+                                                <h6 class="fw-600 font-josefin">Jewellery</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="slick-arrow-container"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End Product Categories One-->
+
+            <!--Start product-grid-->
+            <section class="product-grid pt-60 pb-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-4 d-lg-flex d-none">
+                            <div class="sidebar-content-box">
+                                  <form method="post" action="{% url 'shop' category=current_category gender=current_gender %}" class="m-0 wow fadeInUp animated">
+                                   {% csrf_token %}
+                                    <div class="footer-input-box nborder p-0">
+                                        <input class="ms-3 w-100" type="text" placeholder="Black Jacket" name="searchEng">
+                                        <button type="submit" class="subscribe_btn">
+                                            <i class="flaticon-magnifying-glass"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="sidebar-box mt-4 pt-2 wow fadeInUp animated">
+                                    <h4 class="font-24 titleAfter d-inline-block font-josefin">Select Categories</h4>
+                                    <div class="checkbox-item font-roboto mt-2 pt-1">
+                                        <form>
+                                            <div class="form-group"> <input type="checkbox" id="bedroom"> <label
+                                                    for="bedroom">Bedroom</label> </div>
+                                            <div class="form-group"> <input type="checkbox" id="decoration"> <label
+                                                    for="decoration">Decoration</label> </div>
+                                            <div class="form-group"> <input type="checkbox" id="kitchen"> <label
+                                                    for="kitchen">Kitchen</label> </div>
+                                            <div class="form-group"> <input type="checkbox" id="clothing"> <label
+                                                    for="clothing">Clothing</label> </div>
+                                            <div class="form-group"> <input type="checkbox" id="office"> <label
+                                                    for="office">Office</label> </div>
+                                            <div class="form-group m-0"> <input type="checkbox" id="lighting"> <label
+                                                    for="lighting">Lighting</label> </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <hr class="mt-4 mb-4">
+                                <div class="sidebar-box wow fadeInUp animated">
+                                    <h4 class="font-24 titleAfter d-inline-block font-josefin">Color Option</h4>
+                                    <ul class="colorOptionSellect font-roboto mt-2">
+                                        <li> <a href="#0" class="color-option-single"> <span> Black</span> </a> </li>
+                                        <li> <a href="#0" class="color-option-single active bg2"> <span> Yellow</span>
+                                            </a> </li>
+                                        <li> <a href="#0" class="color-option-single bg3"> <span> Red</span> </a> </li>
+                                        <li> <a href="#0" class="color-option-single bg4"> <span> Blue</span> </a> </li>
+                                        <li> <a href="#0" class="color-option-single bg5"> <span> Green</span> </a>
+                                        </li>
+                                        <li> <a href="#0" class="color-option-single bg6"> <span> Olive</span> </a>
+                                        </li>
+                                        <li> <a href="#0" class="color-option-single bg7"> <span> Lime</span> </a> </li>
+                                        <li> <a href="#0" class="color-option-single bg8"> <span> Pink</span> </a> </li>
+                                        <li> <a href="#0" class="color-option-single bg9"> <span> Cyan</span> </a> </li>
+                                        <li> <a href="#0" class="color-option-single bg10"> <span> Magenta</span> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr class="mt-4 mb-4">
+                                <div class="sidebar-box wow fadeInUp animated">
+                                    <h4 class="font-24 titleAfter d-inline-block font-josefin">Filter By Price</h4>
+                                    <div class="slider-box font-roboto pt-1 mt-3">
+                                        <div id="price-range" class="slider"></div>
+                                        <div class="output-price">
+                                            <label for="priceRange">Price:</label>
+                                            <input type="text" id="priceRange" readonly>
+                                        </div>
+                                        <button class="filterbtn" type="submit"> Filter </button>
+                                    </div>
+                                </div>
+                                <hr class="mt-4 mb-4">
+                                <div class="sidebar-box wow fadeInUp animated">
+                                    <h4 class="font-24 titleAfter d-inline-block font-josefin">Tags </h4>
+                                    <ul class="popular-tag mt-3">
+                                        <li><a href="#" class="font-roboto">Tools</a></li>
+                                        <li><a href="#" class="font-roboto">Store</a></li>
+                                        <li><a href="#" class="font-roboto">Decoration</a></li>
+                                        <li><a href="#" class="font-roboto">Online</a></li>
+                                        <li><a href="#" class="font-roboto">Furnitures</a></li>
+                                        <li><a href="#" class="font-roboto">Beauty</a></li>
+                                        <li><a href="#" class="font-roboto">Fashion</a></li>
+                                        <li><a href="#" class="font-roboto">Office</a></li>
+                                        <li><a href="#" class="font-roboto">Clothing</a></li>
+                                        <li><a href="#" class="font-roboto">Interior</a></li>
+                                        <li><a href="#" class="font-roboto">Good</a></li>
+                                        <li><a href="#" class="font-roboto">Standard</a></li>
+                                        <li><a href="#" class="font-roboto">Chair’s</a></li>
+                                        <li><a href="#" class="font-roboto">Living Room</a></li>
+                                    </ul>
+                                </div>-->
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div
+                                        class="shop-grid-page-top-info d-flex flex-md-row flex-column align-items-center justify-content-sm-between justify-content-center">
+                                        <div class="mb-3 font-roboto wow fadeInUp animated">
+                                            <p>Showing 1–12 of 50 Results</p>
+                                        </div>
+                                        <div class="mb-3 d-flex align-items-center wow fadeInUp animated">
+                                            <div class="short-by me-3">
+                                                <select class="form-select pselect" aria-label="Default select example">
+                                                    <option selected>Featured</option>
+                                                    <option value="1">Best selling</option>
+                                                    <option value="2">Alphabetically, A-Z</option>
+                                                    <option value="3">Alphabetically, Z-A</option>
+                                                    <option value="4">Price, low to high</option>
+                                                    <option value="5">Price, high to low</option>
+                                                    <option value="5">Date, old to new</option>
+                                                </select>
+                                            </div>
+                                            <ul
+                                                class="product-view-style d-flex justify-content-md-between justify-content-center">
+                                                <li>
+                                                    <a href="shop-grid.html" class="viewItem active">
+                                                        <i class="flaticon-pixels"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="shop-list-left-sidebar.html" class="viewItem">
+                                                        <i class="flaticon-list"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="viewItem d-lg-none d-flex" href="#0">
+                                                        <i class="flaticon-filter"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-1">
+                                {% for i in products %}
+                                <div class="col-xl-4 col-lg-6 col-6 mt-30 wow fadeInUp animated">
+
+                                    <div class="product-item">
+                                        <div class="product-image-wrapper">
+                                            <a class="d-block" href="/product-detail/{{ i.id }}">
+                                                <img class="normal-image" src="{{ i.images.0 }}"
+                                                    alt="product">
+                                                <img class="hover-image changeimage"
+                                                    src="{{ i.images.1 }}" alt="product">
+                                            </a>
+                                            <span class="badge bgBage1 font-12 font-roboto radious50">
+                                                -25%
+                                            </span>
+                                            <ul class="product-button-set topstyle style4 d-lg-inline-flex d-none">
+                                                <li class="product-button">
+                                                    <a href="wishlist.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-heart"></i>
+                                                        <span class="hoverText"> Wishlist </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="compare.html" class="buttonLInk radious50">
+                                                        <i class="flaticon-left-and-right-arrows"> </i>
+                                                        <span class="hoverText"> Compare </span>
+                                                    </a>
+                                                </li>
+                                                <li class="product-button">
+                                                    <a href="#exampleModalToggle" data-bs-toggle="modal" role="button"
+                                                        class="buttonLInk radious50">
+                                                        <i class="flaticon-view"></i>
+                                                        <span class="hoverText"> Quick View </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <button
+                                                onclick="add_to_cart({{ i.id }},'{{ i.size.0 }}')" class="btn-primary addBtn d-flex align-items-center justify-content-center text-uppercase font-14 fw-500">
+                                                Add To Cart
+                                            </button>
+                                        </div>
+                                        <div class="product-content mt-2 pt-2 text-center position-relative">
+                                            <p class="font-roboto font-12 fw-400">{{ i.category }}</p>
+                                            <a class="d-block pt-1" href="shop-details-3.html">
+                                                <h6 class="product-title font-josefin font-18 fw-600">
+                                                    {{ i.name }}
+                                                </h6>
+                                            </a>
+                                            <div
+                                                class="product-price pt-1 d-flex align-items-center justify-content-center">
+                                                <span class="compared-price colorBage1 font-14 font-josefin fw-500">
+                                                    {{ i.price }}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                {% endfor %}
+
+                            </div>
+
+                            <div class="row">
+    <div class="col-12">
+        <ul class="pagination mt-60 justify-content-center wow fadeInUp animated">
+
+            {% if products.has_previous %}
+            <li class="next">
+                <a href="?page={{ products.previous_page_number }}">
+                    <i class="flaticon-back-1" aria-hidden="true"></i>
+                </a>
+            </li>
+            {% endif %}
+
+            {% for num in products.paginator.page_range %}
+                {% if products.number == num %}
+                <li>
+                    <a href="#0" class="active">{{ num }}</a>
+                </li>
+                {% elif num > products.number|add:"-3" and num < products.number|add:"3" %}
+                <li>
+                    <a href="?page={{ num }}">{{ num }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if products.has_next %}
+            <li class="next">
+                <a href="?page={{ products.next_page_number }}">
+                    <i class="flaticon-next-1" aria-hidden="true"></i>
+                </a>
+            </li>
+            {% endif %}
+
+        </ul>
+    </div>
+</div>
+                            <!--<div class="row">
+                                <div class="col-12">
+                                    <ul class="pagination mt-60 justify-content-center wow fadeInUp animated">
+                                        <li class="next"><a href="#0"><i class="flaticon-back-1" aria-hidden="true"></i>
+                                            </a></li>
+                                        <li><a href="#0">1</a></li>
+                                        <li><a href="#0" class="active">2</a></li>
+                                        <li><a href="#0">3</a></li>
+                                        <li><a href="#0">...</a></li>
+                                        <li><a href="#0">10</a></li>
+                                        <li class="next"><a href="#0"><i class="flaticon-next-1" aria-hidden="true"></i>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End product-grid--> 
+        </div>
+        <!-- End Body Container -->
+
+        <!-- Footer Start  -->
+        <footer class="footer-default">
+            <!--Start Footer-->
+            <div class="footer-default__main-footer position-relative">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
+                            <div class="footer-default__single-box">
+                                <div class="company-info">
+                                    <div class="footer-logo">
+                                        <a href="index.html"> <img src="assets/images/logo/logo-white.png" alt=""> </a>
+                                    </div>
+                                    <div class="text1 font-roboto">
+                                        <p>Orchestrate maintainable mindshare through equity invested action items.
+                                            Compellingly procrastinate...</p>
+                                    </div>
+                                    <div class="footer__medio-boxx mt-3 medio-boxx d-flex align-items-center">
+                                        <ul class="d-flex align-items-center">
+                                            <li class="ps-0">
+                                                <a href="https://www.facebook.com/" target="_blank" class="active ">
+                                                    <i class="flaticon-facebook-app-symbol"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/" target="_blank">
+                                                    <i class="flaticon-youtube"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://twitter.com/" target="_blank">
+                                                    <i class="flaticon-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/" target="_blank">
+                                                    <i class="flaticon-instagram"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
+                            <div class="footer-default__single-box d-md-block d-none">
+                                <div class="footer-title">
+                                    <h5 class="font-24 color-white font-josefin"> Useful Links </h5>
+                                </div>
+                                <ul class="footer-links">
+                                    <li><a class="hover-base font-roboto" href="my-account.html">Account</a></li>
+                                    <li><a class="hover-base font-roboto" href="login.html">Sign In</a></li>
+                                    <li><a class="hover-base font-roboto" href="chat">View Cart</a></li>
+                                    <li><a class="hover-base font-roboto" href="wishlist.html">My WishList</a></li>
+                                    <li><a class="hover-base font-roboto" href="compare.html">Compare Products</a></li>
+                                </ul>
+                            </div>
+                            <div
+                                class="footer-default__single-box aline blackstyle commonAccordian borderLine whiteLine d-md-none d-block">
+                                <div class="accordio " id="accordionExamplem">
+                                    <div class="accordion-item footer-accordian">
+                                        <h2 class="accordion-header border-0" id="headingm">
+                                            <button
+                                                class="accordion-button font-josefin justify-content-start p-0 collapsed"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapsem"
+                                                aria-expanded="false" aria-controls="collapsem">
+                                                Useful Links
+                                            </button>
+                                        </h2>
+                                        <div id="collapsem" class="accordion-collapse collapse"
+                                            aria-labelledby="headingm" data-bs-parent="#accordionExamplem">
+                                            <div class="accordion-body">
+                                                <ul class="footer-links">
+                                                    <li>
+                                                        <a class="hover-base font-roboto" href="my-account.html">Account
+                                                        </a>
+                                                    </li>
+                                                    <li><a class="hover-base font-roboto" href="login.html">Sign In</a>
+                                                    </li>
+                                                    <li><a class="hover-base font-roboto" href="cart.html">View Cart</a>
+                                                    </li>
+                                                    <li><a class="hover-base font-roboto" href="wishlist.html">My
+                                                            WishList</a></li>
+                                                    <li><a class="hover-base font-roboto" href="compare.html">Compare
+                                                            Products</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
+                            <div class="footer-default__single-box d-md-block d-none">
+                                <div class="footer-title">
+                                    <h4 class="font-24 color-white  font-josefin"> Information </h4>
+                                </div>
+                                <ul class="footer-links">
+                                    <li><a class="hover-base font-roboto" href="about.html">About us</a></li>
+                                    <li><a class="hover-base font-roboto" href="contact.html">Contact Us </a></li>
+                                    <li><a class="hover-base font-roboto" href="faq.html">Faq</a></li>
+                                    <li><a class="hover-base font-roboto" href="blog.html">Latest Posts</a></li>
+                                    <li><a class="hover-base font-roboto" href="order-track.html">Order Track</a></li>
+                                </ul>
+                            </div>
+                            <div
+                                class="footer-default__single-box aline blackstyle commonAccordian  borderLine whiteLine d-md-none d-block">
+                                <div class="accordio " id="accordionExamplen">
+                                    <div class="accordion-item footer-accordian">
+                                        <h2 class="accordion-header border-0" id="headingn">
+                                            <button
+                                                class="accordion-button  font-josefin justify-content-start p-0 collapsed"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapsen"
+                                                aria-expanded="false" aria-controls="collapsen">
+                                                Information
+                                            </button>
+                                        </h2>
+                                        <div id="collapsen" class="accordion-collapse collapse"
+                                            aria-labelledby="headingn" data-bs-parent="#accordionExamplen">
+                                            <div class="accordion-body">
+                                                <ul class="footer-links">
+                                                    <li><a class="hover-base font-roboto" href="about.html">About us</a></li>
+                                                    <li><a class="hover-base font-roboto" href="contact.html">Contact Us </a></li>
+                                                    <li><a class="hover-base font-roboto" href="faq.html">Faq</a></li>
+                                                    <li><a class="hover-base font-roboto" href="blog.html">Latest  Posts</a></li>
+                                                    <li><a class="hover-base font-roboto" href="order-track.html">Order Track</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
+                            <div class="footer-default__single-box d-md-block d-none">
+                                <div class="footer-title">
+                                    <h4 class="font-24 color-white font-josefin"> Office </h4>
+                                </div>
+                                <div class="footer-address-box">
+                                    <div class="text1 pt-3">
+                                        <p>29 Holles Place, Dublin 2 D02 YY46</p>
+                                    </div>
+                                    <div class="text2">
+                                        <p>68 Jay Street, Suite 902 New Side <br> Brooklyn, NY 11201</p>
+                                    </div>
+                                    <div class="text3">
+                                        <p>New York, United States</p>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div
+                                class="footer-default__single-box aline blackstyle commonAccordian  borderLine whiteLine d-md-none d-block">
+                                <div class="accordio " id="accordionExampleb">
+                                    <div class="accordion-item footer-accordian">
+                                        <h2 class="accordion-header border-0" id="headingb">
+                                            <button
+                                                class="accordion-button font-josefin justify-content-start p-0 collapsed"
+                                                type="button" data-bs-toggle="collapse" data-bs-target="#collapseb"
+                                                aria-expanded="false" aria-controls="collapseb">
+                                                Office
+                                            </button>
+                                        </h2>
+                                        <div id="collapseb" class="accordion-collapse collapse"
+                                            aria-labelledby="headingb" data-bs-parent="#accordionExampleb">
+                                            <div class="accordion-body">
+                                                <div class="footer-address-box">
+                                                    <div class="text1 pt-3">
+                                                        <p>29 Holles Place, Dublin 2 D02 YY46</p>
+                                                    </div>
+                                                    <div class="text2 mt-1">
+                                                        <p>68 Jay Street, Suite 902 New Side <br> Brooklyn, NY 11201</p>
+                                                    </div>
+                                                    <div class="text3 mt-1">
+                                                        <p>New York, United States</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- footer-bottom Footer-->
+            <div class="footer_bottom position-relative">
+                <div class="container">
+                    <div class="footer_bottom_content">
+                        <div class="copyright wow fadeInUp animated">
+                            <p>© 2022 <a href="index.html" class="colorBage1">Karte.</a> All Rights Reserved.</p>
+                        </div>
+                        <div class="footer-payment wow fadeInUp animated">
+                            <a href="#0"> <img src="assets/images/home-4/payment_1.png" alt="payment"> </a>
+                            <a href="#0"> <img src="assets/images/home-4/payment_2.png" alt="payment"> </a>
+                            <a href="#0"> <img src="assets/images/home-4/payment_3.png" alt="payment"> </a>
+                            <a href="#0"> <img src="assets/images/home-4/payment_4.png" alt="payment"> </a>
+                        </div>
+                        <div class="footer-bottom-menu wow fadeInUp animated">
+                            <ul class="d-flex align-items-center">
+                                <li> <a href="contact.html">Sitemap</a> </li>
+                                <li> <a href="contact.html">Terms of Service</a> </li>
+                                <li> <a href="contact.html">Privacy Policy</a> </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Quick View start-->
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog quickview-modal-width modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="quickview-modal position-relative">
+                        <button type="button" class="btn-close animationCloser quickCross  modalcloser"
+                            data-bs-dismiss="modal" aria-label="Close">
+                            <span class="span1 animationLine"> </span>
+                            <span class="span2 animationLine"> </span>
+                        </button>
+                        <div class="product-details pr-30">
+                            <div class="container auto-container p-0">
+                                <div class="row align-items-center">
+                                    <div class="col-md-6">
+                                        <div class="quick-view-slider">
+                                            <div class="tabs">
+                                                <div class="qvBigImgBob">
+                                                    <div id="tab7" class="tab-item qvImg">
+                                                        <div class="popup-product-single-image">
+                                                            <img src="assets/images/home-6/products-1.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div id="tab8" class="tab-item qvImg">
+                                                        <div class="popup-product-single-image">
+                                                            <img src="assets/images/home-6/products-2.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <div id="tab9" class="tab-item qvImg">
+                                                        <div class="popup-product-single-image">
+                                                            <img src="assets/images/home-6/products-3.png" alt="img">
+                                                        </div>
+                                                    </div>
+                                                    <button class="prev lh-0"> <i class="flaticon-back"></i> </button>
+                                                    <button class="next lh-0"> <i class="flaticon-next"></i> </button>
+                                                </div>
+                                                <div class="qvSliderNavBox">
+                                                    <ul>
+                                                        <li class="tab-nav qvSliderNav">
+                                                            <a href="#tab7">
+                                                                <img src="assets/images/home-6/products-1.png" alt="img">
+                                                            </a>
+                                                        </li>
+                                                        <li class="tab-nav qvSliderNav">
+                                                            <a href="#tab8">
+                                                                <img src="assets/images/home-6/products-2.png" alt="img">
+                                                            </a>
+                                                        </li>
+                                                        <li class="tab-nav qvSliderNav">
+                                                            <a href="#tab9">
+                                                                <img src="assets/images/home-6/products-3.png" alt="img"> 
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="product-details-content position-relative">
+                                            <h4 class="font-josefin font-36">Nike Sport Sneakers</h4>
+                                            <ul class="rating mt-2 pdrating align-items-center">
+                                                <li> <i class="flaticon-star-1"></i> </li>
+                                                <li> <i class="flaticon-star-1"></i> </li>
+                                                <li> <i class="flaticon-star-1"></i> </li>
+                                                <li> <i class="flaticon-star-1"></i> </li>
+                                                <li> <i class="colorGray flaticon-star-1"></i> </li>
+                                                <li class="colorGray font-14 font-roboto mb--5 ms-2"> (2 Reviews)</li>
+                                            </ul>
+                                            <div class="product-price pdStyle1 mt-3 lh-1 d-flex align-items-center">
+                                                <span class="regular-price font-josefin font-18 me-2"> $110.00 </span>
+                                                <span class="compared-price colorBage1 font-36 font-josefin fw-500">
+                                                    $80.00
+                                                </span>
+                                                <span class="font-roboto font-14 ms-2">(+15% Vat Included) </span>
+                                            </div>
+                                            <div class="product-details-color mt-3">
+                                                <p class="fw-500 colorBlack font-josefin">Model</p>
+                                                <ul class="product-switcher font-roboto style2 mt-2">
+                                                    <li>
+                                                        <a href="#0" class="pswitch-item wh50 me-2">
+                                                            <img src="assets/images/home-6/products-1.png" alt="img">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#0" class="pswitch-item wh50 me-2 active">
+                                                            <img src="assets/images/home-6/products-2.png" alt="img">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#0" class="pswitch-item wh50">
+                                                            <img src="assets/images/home-6/products-3.png" alt="img">
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div> 
+                                            <p class="fw-500 font-josefin colorBlack mt-2 pt-2">
+                                                Size
+                                            </p>
+                                            <ul class="productSize font-roboto style2 mt-2">
+                                                <li><a href="#0" class="font-josefin productSizeitem active me-2">S </a> </li>
+                                                <li><a href="#0" class="font-josefin productSizeitem me-2">M</a></li>
+                                                <li><a href="#0" class="font-josefin productSizeitem me-2">L</a></li>
+                                                <li><a href="#0" class="font-josefin productSizeitem me-2">XL</a></li>
+                                                <li><a href="#0" class="underline font-14">Size Guide</a></li>
+                                            </ul>
+                                            <p class="fw-500 font-josefin colorBlack mt-2 pt-2">
+                                                Quantity
+                                            </p>
+                                            <div class="d-flex align-items-center">
+                                                <div class="qtySelector pdCount me-3 mt-2">
+                                                    <span class="decreaseQty"><i class="flaticon-minus-sign"></i>
+                                                    </span>
+                                                    <input type="text" class="qtyValue p-0 me-2 ms-2 text-center" value="1">
+                                                    <span class="increaseQty"> <i class="flaticon-plus-1"></i>
+                                                    </span>
+                                                </div>
+                                                <p class="font-roboto colorBlack pt-1 lh-1 d-flex align-items-center font-14">
+                                                    <span class="me-1 greenc"><i class="flaticon-select"></i></span>
+                                                    <span>Only 10 Left !</span>
+                                                </p>
+                                            </div>
+                                            <button class="btn--primary mt-3 style2 w-100">
+                                                Add To Cart
+                                            </button>
+                                            <button class="btn--primary mt-3 w-100">
+                                                Buy It Now
+                                            </button>
+                                            <h6 class="colorBlack mt-3 font-josefin fw-600">Guranteed Safe Checkout</h6>
+                                            <ul class="d-flex align-items-center mt-2 pt-1">
+                                                <li>
+                                                    <a href="#0" class="d-inline-block me-2">
+                                                        <img src="assets/images/innerpage/pay-1.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" class="d-inline-block me-2">
+                                                        <img src="assets/images/innerpage/pay-2.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" class="d-inline-block me-2">
+                                                        <img src="assets/images/innerpage/pay-3.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" class="d-inline-block me-2">
+                                                        <img src="assets/images/innerpage/pay-4.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" class="d-inline-block me-2">
+                                                        <img src="assets/images/innerpage/pay-5.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#0" class="d-inline-block">
+                                                        <img src="assets/images/innerpage/pay-6.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Start -->
+        <div class="offcanvas offcanvas-start mobile-nav-wrapper" tabindex="-1" id="offcanvasmenu">
+            <div class="offcanvas-header d-flex justify-content-end p-0">
+                <button type="button" class="btn-close animationCloser nev-cross text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                    <span class="span1 animationLine"> </span>
+                    <span class="span2 animationLine"> </span>
+                </button>
+            </div>
+            <div class="offcanvas-body p-0">
+                <nav>
+                    <ul class="mobile-nav navbar-nav flex-column">
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Home </span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="index.html">Home 01</a> </li>
+                                <li> <a class="dropdown-item" href="index-2.html">Home 02</a> </li>
+                                <li> <a class="dropdown-item" href="index-3.html">Home 03</a> </li>
+                                <li> <a class="dropdown-item" href="index-4.html">Home 04</a> </li>
+                                <li> <a class="dropdown-item" href="index-5.html">Home 05</a> </li>
+                                <li> <a class="dropdown-item" href="index-6.html">Home 06</a> </li>
+                                <li> <a class="dropdown-item" href="index-7.html">Home 07</a> </li> 
+                            </ul>
+                        </li>
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Shop </span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="shop-grid-1.html">Shop Grid 01</a> </li>
+                                <li> <a class="dropdown-item" href="shop-grid-2.html">Shop Grid 02</a> </li>
+                                <li> <a class="dropdown-item" href="shop-grid-3.html">Shop Grid 03</a> </li>
+                                <li> <a class="dropdown-item" href="shop-list.html">Shop List</a> </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Single Product </span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="product-details.html">Single Product 01</a> </li>
+                                <li> <a class="dropdown-item" href="product-details-2.html">Single Product 02</a> </li>
+                                <li> <a class="dropdown-item" href="product-details-3.html">Single Product 03</a> </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Pages</span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="about.html">About </a> </li>
+                                <li> <a class="dropdown-item" href="cart.html">Cart </a> </li>
+                                <li> <a class="dropdown-item" href="checkout.html">Checkout </a> </li>
+                                <li> <a class="dropdown-item" href="compare.html">Compare </a> </li>
+                                <li> <a class="dropdown-item" href="error.html">Error</a> </li>
+                                <li> <a class="dropdown-item" href="faq.html">Faq</a> </li>
+                                <li> <a class="dropdown-item" href="login.html">Login</a> </li>
+                                <li> <a class="dropdown-item" href="registration.html">Registration </a> </li>
+                                <li> <a class="dropdown-item" href="wishlist.html">Wishlist</a> </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-list nav-item p-0">
+                            <a href="#0" class="nav-link">
+                                <span>Blog</span>
+                                <span class="mnav-plus-minus">
+                                    <i class="flaticon-plus-1"></i>
+                                    <i class="flaticon-minus-sign"></i>
+                                </span>
+                            </a>
+                            <ul class="dropdown">
+                                <li> <a class="dropdown-item" href="blog.html">Blog </a> </li>
+                                <li> <a class="dropdown-item" href="blog-details.html">Blog Details </a> </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item p-0"><a class="nav-link bb-0" href="contact.html">Contact </a></li>
+                    </ul>
+                </nav>
+                <ul class="mobile-contact-info">
+                    <li class="single-minfo">
+                        <a href="#0"><i class="flaticon-location-1"></i>Our location</a>
+                    </li>
+                    <li class="single-minfo">
+                        <a href="#0"><i class="flaticon-account"></i>Log In / Sign Up</a>
+                    </li>
+                    <li class="single-minfo">
+                        <a href="tel:+1234567890"><i class="flaticon-phone-call"></i>(+01) - 2345 - 6789</a>
+                    </li>
+                </ul>
+                <p class="site-copyright">Copyright 2022 &copy; <a class="underline"
+                        href="https://themeforest.net/user/mate_themes">Karte</a>.
+                    All rights reserved. Powered by <a class="underline"
+                        href="https://themeforest.net/user/mate_themes">Mate_Themes</a>.
+                </p>
+            </div>
+        </div>
+        <!-- Mobile Nav End -->
+
+        <!-- Offcanvas Menu-Search Start -->
+        <div class="offcanvas menusearch-offcanvas-top offcanvas-top" tabindex="-1" id="menusearch">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="menusearch">
+                            <div class="offcanvas-header p-0">
+                                <h5 class="fw-500">What are you looking for?</h5>
+                                <button type="button" class="btn-close animationCloser text-reset"
+                                    data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <span class="span1 animationLine"> </span>
+                                    <span class="span2 animationLine"> </span>
+                                </button>
+                            </div>
+                            <div class="offcanvas-body p-0">
+                                <form action="#0" class="newsletterBox searchbox">
+                                    <div class="newsletter-input-group border-0 p-0 pt-2">
+                                        <input type="search" class="form-control"
+                                            placeholder="Search for products brands and more">
+                                        <button class="w-auto searchboxButton me-3 p-0" type="submit"> <i
+                                                class="flaticon-loupe"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Offcanvas Start -->
+        <div class="offcanvas p-4 pt-3 pe-0 offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight">
+            <div class="offcanvas-header d-flex justify-content-end pe-4">
+                <button type="button" class="btn-close p-0 animationCloser whiteCloser" data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                    <span class="span1 animationLine"> </span>
+                    <span class="span2 animationLine"> </span>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="sidebar-info-contents">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/logo/logo-white.png" alt=""></a>
+                    </div>
+                    <div class="content-box">
+                        <h4 class="color-white mt-3 pt-2 animationLine d-inline-block font-josefin">About Us</h4>
+                        <div class="inner-text pt-2">
+                            <p class="font-roboto color-textwhite">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                        </div>
+                    </div>
+                    <div class="form_inner mt-3 pt-1">
+                        <h4 class="color-white font-josefin animationLine d-inline-block ">Support</h4>
+                        <form class="mt-2" action="index.html" method="post">
+                            <div class="form-group mt-4"> <input type="text" name="name" placeholder="Name" required="">
+                            </div>
+                            <div class="form-group mt-4"> <input type="email" name="email" placeholder="Email"
+                                    required="">
+                            </div>
+                            <div class="form-group mt-4"> <textarea name="message" placeholder="Message..."></textarea>
+                            </div>
+                            <div class="form-group message-btn mt-4">
+                                <button type="submit" class="btn--secondary"> <span class="txt">Submit Now</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="sidebar-contact-info mt-3 pt-3">
+                        <h4 class="color-white font-josefin animationLine d-inline-block ">Contact Info</h4>
+                        <ul class="mt-2 pt-1">
+                            <li class="font-roboto color-textwhite d-flex align-items-center">
+                                <i class="me-2 flaticon-location-1"></i> New York, United States
+                            </li>
+                            <li class="font-roboto pt-2 color-textwhite d-flex align-items-center">
+                                <i class="me-2 flaticon-phone-call"></i>
+                                <a href="tel:+44203700001" class="color-textwhite">+44 123 456 789</a>
+                            </li>
+                            <li class="font-roboto pt-2 color-textwhite d-flex align-items-center">
+                                <i class="me-2 flaticon-envelope"></i>
+                                <a href="mailto:info@example.com" class="color-textwhite">info@example.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="thm-medio-boxx1 mt-3">
+                        <ul class="social-box">
+                            <li class="facebook"> <a href="https://www.facebook.com/" target="_blank"><i
+                                        class="flaticon-facebook-app-symbol"></i></a> </li>
+                            <li class="twitter"> <a href="https://twitter.com/" target="_blank"><i
+                                        class="flaticon-twitter"></i></a> </li>
+                            <li class="instagram"> <a href="https://www.instagram.com/" target="_blank"><i
+                                        class="flaticon-instagram"></i></a> </li>
+                            <li class="youtube"> <a href="https://www.youtube.com/" target="_blank"><i
+                                        class="flaticon-youtube"></i></a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Offcanvas Start -->
+        <div class="offcanvas offcanvascart  p-4 pt-3 offcanvas-end" tabindex="-1" id="offcanvasRight2">
+            <div class="offcanvas-header d-flex justify-content-between align-content-center">
+                <h6 class="text-uppercase font-josefin colorrBlack fw-500">Your Cart (03)</h6>
+                <button type="button" class="btn-close p-0 animationCloser" data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                    <span class="span1 animationLine"> </span>
+                    <span class="span2 animationLine"> </span>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="side-cart h-100 d-flex flex-column justify-content-between">
+                    <div class="top">
+                        <div class="cart_items">
+                            <div class="items d-flex justify-content-between align-items-center">
+                                <div class="left d-flex align-items-center">
+                                    <a href="shop-details-1.html"
+                                        class="thumb d-flex justify-content-between align-items-center">
+                                        <img src="assets/images/home-4/products-img1.jpg" alt="">
+                                    </a>
+                                    <div class="text">
+                                        <a href="shop-details-1.html">
+                                            <h6 class="colorrBlack font-josefin fw-500">Diamond Bracelet</h6>
+                                        </a>
+                                        <p>2 X <span>$350.00</span> </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item-remove"> <i class="flaticon-cross"></i> </div>
+                                </div>
+                            </div>
+                            <div class="items d-flex justify-content-between align-items-center">
+                                <div class="left d-flex align-items-center">
+                                    <a href="shop-details-1.html"
+                                        class="thumb d-flex justify-content-between align-items-center">
+                                        <img src="assets/images/home-4/products-img2.jpg" alt="">
+                                    </a>
+                                    <div class="text"> <a href="shop-details-1.html">
+                                            <h6 class="colorrBlack font-josefin fw-500">Blacked Neckles </h6>
+                                        </a>
+                                        <p>1 X <span>$150.00</span> </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item-remove"> <i class="flaticon-cross"></i> </div>
+                                </div>
+                            </div>
+                            <div class="items d-flex justify-content-between align-items-center">
+                                <div class="left d-flex align-items-center">
+                                    <a href="shop-details-1.html"
+                                        class="thumb d-flex justify-content-between align-items-center">
+                                        <img src="assets/images/home-4/products-img3.jpg" alt="">
+                                    </a>
+                                    <div class="text"> <a href="shop-details-1.html">
+                                            <h6 class="colorrBlack font-josefin fw-500">Diamond Ring </h6>
+                                        </a>
+                                        <p>1 X <span>$200.00</span> </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item-remove"> <i class="flaticon-cross"></i> </div>
+                                </div>
+                            </div>
+                            <div class="items d-flex justify-content-between align-items-center">
+                                <div class="left d-flex align-items-center">
+                                    <a href="shop-details-2.html"
+                                        class="thumb d-flex justify-content-between align-items-center">
+                                        <img src="assets/images/home-4/products-img4.jpg" alt="">
+                                    </a>
+                                    <div class="text"> <a href="shop-details-1.html">
+                                            <h6 class="colorrBlack font-josefin fw-500">Women Earring</h6>
+                                        </a>
+                                        <p>1 X <span>$150.00</span> </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="item-remove"> <i class="flaticon-cross"></i> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="total-ammount d-flex justify-content-between align-items-center">
+                            <h6 class="text-uppercase colorrBlack font-josefin fw-500">Total:</h6>
+                            <h6 class="ammount text-uppercase colorrBlack font-josefin fw-500">$850.00</h6>
+                        </div>
+                        <div class="button-box d-flex justify-content-between">
+                            <a href="cart.html" class="btn_black"> View Cart </a>
+                            <a href="cart.html" class="button-2 btn_theme"> Chekout </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--===scroll bottom to top===-->
+        <a href="#0" class="scrollToTop"><i class="flaticon-up-arrow"></i></a>
+        <!--===scroll bottom to top===-->
+
+
+        <!--==== Js Scripts Start ====-->
+        <!-- Jquery v3.6.0 Js -->
+        <script src="{% static 'assets/js/jqurey.v3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/popper.v2.9.3.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.v5.1.1.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery-ui.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/slick.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jarallax.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/img-comparison-slider.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'assets/js/plugin/wow.v1.3.0.min.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+    <!--Jivo chat-->
+        <script src="//code.jivosite.com/widget/y6AIKc6tjk" async></script>
+
+    <script>
+                            function add_to_cart(id, size){
+    window.location.href = "/add-to-cart/" + id + "/" +size;
+}
+
+
+        </script>
+
+
+    </div>
+    <!-- Page-wrapper End -->
+
+</body>
+
+{% endblock %}
